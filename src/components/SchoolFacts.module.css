@@ -1,0 +1,13 @@
+.box{
+    border: 5px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title{
+    color: cornflowerblue;
+}
+
+.result{
+    color: blueviolet;
+}

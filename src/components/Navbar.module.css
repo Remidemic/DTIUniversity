@@ -1,0 +1,11 @@
+h1{
+    margin: 5px;
+}
+
+.navbar{
+    border: 5px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+}

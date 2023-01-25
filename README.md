@@ -69,3 +69,6 @@ model list
 model 1: inital search w/ link on number of majors 
 nested model 2: list of majors. each linked to data on program
 model 3: 
+
+how to post to gitHub Pages
+https://blog.logrocket.com/deploying-react-apps-github-pages/#pushing-the-react-app-to-the-github-repository

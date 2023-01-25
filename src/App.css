@@ -7,8 +7,8 @@
 
 body {
     background-color: gray;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(0, 0, 0, 0.4);
+    font-family:Arial, Helvetica, sans-serif ;
+    background-color: #292d35;
     /* width: 100%; */
     /* height: 100vh; */
     position: relative;
@@ -19,13 +19,6 @@ body {
     font-size: 10px;
 }
 
-p {
-    font-size: 1.3rem;
-}
-
-/* h1 {
-    font-size: 3rem;
-} */
 
 .body:before {
     content: '';
@@ -69,17 +62,6 @@ input {
 }
 
 
-/* background: url(https://live.staticflickr.com/8358/28103482744_4995674236_b.jpg) no-repeat center center/cover; */
-
-
-/* .search {
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
-} */
-
 .description {
     position: relative;
     right: -90%;
@@ -98,18 +80,4 @@ input {
     /* justify-content:center; */
 }
 
-.top {
-    width: 100%;
-    margin: 1rem;
-}
 
-.description {
-    position: relative;
-    right: -90%;
-}
-
-.bottom {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-}

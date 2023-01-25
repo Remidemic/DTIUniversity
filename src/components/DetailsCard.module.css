@@ -5,9 +5,11 @@
 
 .frame{
     border: 5px solid black;
+
 }
 
 h3 {
 text-align: center;
     font-size: 10px;
+    color: darkgreen;
 }
