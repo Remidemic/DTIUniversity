@@ -1,0 +1,13 @@
+.card{
+    background: white;
+    box-shadow: 0 2px 8px black;
+}
+
+.frame{
+    border: 5px solid black;
+}
+
+h3 {
+text-align: center;
+    font-size: 10px;
+}

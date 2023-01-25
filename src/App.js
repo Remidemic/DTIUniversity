@@ -4,6 +4,7 @@ import axios from 'axios';
 import MajorsList from './components/MajorsList';
 import SchoolFacts from './components/SchoolFacts';
 import Navbar from './components/Navbar';
+import DetailsCard from './components/DetailsCard';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
           type="text" />
       </div>
       <SchoolFacts data={data} />
+      <DetailsCard/>
       <MajorsList data={data} />
     </div>
   );
