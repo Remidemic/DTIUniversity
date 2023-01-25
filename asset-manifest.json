@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DTIUniversity/static/css/main.522b92ae.css",
+    "main.js": "/DTIUniversity/static/js/main.cee09456.js",
+    "index.html": "/DTIUniversity/index.html",
+    "main.522b92ae.css.map": "/DTIUniversity/static/css/main.522b92ae.css.map",
+    "main.cee09456.js.map": "/DTIUniversity/static/js/main.cee09456.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.522b92ae.css",
+    "static/js/main.cee09456.js"
+  ]
+}
