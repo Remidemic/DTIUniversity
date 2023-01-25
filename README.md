@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+DTIU will use api to pull college statistics about specific colleges. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+pt 1.
 
-### `npm start`
+- data includes true cost of schooling on average
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=CUNY%20city%20college&api_key=gj8gTZioRMSkwnGkcBPLtvtZyJV0ShIkGT8LD1Rp
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+github 
+https://github.com/RTICWDT/open-data-maker/blob/master/API.md
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+latest.cost.avg_net_price.consumer.overall_median = Overall median for average net price 
 
-### `npm run build`
+latest.cost.avg_net_price.consumer.median_by_pred_degree = Median average net price amongst institutions with the same predominant degree category
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+user path - 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+after user enters a school, they can click on total programs offered at school. this brings to a new page showing all majors offered at school 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+majors, on hover, will show 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+()
+These are some roles you can get with your degree 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+https://www.businessnewsdaily.com/8012-college-majors-career-guide.html
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+results pt.1 = total debt, degree & average payment. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+pt. 2 
 
-### Code Splitting
+https://www.salary.com/research ? 
+https://www.glassdoor.com/developer/index.htm ? api?
+find average salary for given degree
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+(find an api that shows average salary for degree )
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+obsticles :
+FAFSA has to be considered to give acurate extimates
+data may be incomplete -
 
-### Making a Progressive Web App
+make routes for 2nd page 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+user experience - pick colleges, and programs. in user profile it will show shcool & cost properties as well as show future income. 
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+user picks will be logged in database with crud user buttons. 
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+blake - add an option for schools to be a featured school show how much it can improve enrollment 
+
+include key loggers 
+
+include trade schools 
+
+
+
+
+model list 
+model 1: inital search w/ link on number of majors 
+nested model 2: list of majors. each linked to data on program
+model 3: 
