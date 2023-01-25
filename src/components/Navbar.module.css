@@ -2,10 +2,16 @@ h1{
     margin: 5px;
 }
 
+
 .navbar{
-    border: 5px solid black;
+    
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-around;
+    padding: 0;
+}
+
+.box{
+    border: 5px solid black;
 }

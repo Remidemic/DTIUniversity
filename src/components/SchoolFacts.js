@@ -26,7 +26,7 @@ function SchoolFacts({ data }) {
                     <h4 className={`${classes.result}`}>{`${data.results[0].school.city},
                         ${data.results[0].school.state}  
                         ${data.results[0].school.zip}`}
-                     </h4>
+                    </h4>
                     : null
                 }
             </li>
@@ -40,19 +40,30 @@ function SchoolFacts({ data }) {
                 }
             </li>
 
-            <li className={`${classes.title}` }>Comsumer rate of completion as a percent :
+            <li className={`${classes.title}`}>Comsumer rate of completion as a percent :
 
                 {data.results ?
                     <h4 className={`${classes.result}`}>{data.results[0].latest.completion.consumer_rate}</h4>
-                    
+
                     : null
                 }
             </li>
 
-            <li>
-
+            <li className={`${classes.title}`}>
+                Tuition in state/out of state :
                 {data.results ?
-                    <h4>{data.results[0].latest.cost.attendance.academic_year}</h4>
+                    <h4 className={`${classes.result}`}> $ {`${data.results[0].latest.cost.tuition.in_state} / $  
+                        ${data.results[0].latest.cost.tuition.out_of_state}`}
+                    </h4>
+                    : null
+                }
+            </li>
+            <li className={`${classes.title}`}>
+                Room & Board on campus / off campus :
+                {data.results ?
+                    <h4 className={`${classes.result}`}> $ {`${data.results[0].latest.cost.roomboard.oncampus} / $  
+                        ${data.results[0].latest.cost.roomboard.offcampus}`}
+                    </h4>
                     : null
                 }
             </li>

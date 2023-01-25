@@ -71,3 +71,5 @@ function MainResults() {
 }
 
 export default MainResults
+
+// latest.cost.avg_net_price.consumer.median_by_pred_degree = Median average net price amongst institutions with the same predominant degree category

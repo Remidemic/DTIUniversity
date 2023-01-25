@@ -7,8 +7,9 @@ const MajorsList = ({ data }) => {
         <>
             {data.results ?
                 <div>
-                    <p> Full list of majors</p>
-                    <a href=''> {data.results[0].latest.programs.cip_4_digit.length} Majors listed </a>
+                    <p> Full list of 
+                    <a href=''> {data.results[0].latest.programs.cip_4_digit.length} </a>
+                        programs listed</p>
                     <br />
                     {data.results[0].latest.programs.cip_4_digit.map((major) =>
                         <li className='majorList' key={Math.random()}>
