@@ -7,6 +7,13 @@ const MajorsList = ({ data }) => {
     // const [majorPick, setMajorPick] = useState('');
     // <DetailsCard majorPick={majorPick}/>
 
+
+    // const logoutHandler = () => {
+    //     setIsLoggedIn(false);
+    // };
+
+    // { isLoggedIn && <Home onLogout={logoutHandler} /> }
+
     return (
         <>
             {data.results ?
@@ -19,7 +26,9 @@ const MajorsList = ({ data }) => {
                         const key = index;
                         return (
 
-                            <div className='majorList' key={key}>
+                            <div className='majorList' key={key} onClick={() => {
+                                console.log({ key })
+                            }} >
                                 {key} - {major.title} {major.credential.title}
                             </div>
                         )
@@ -31,3 +40,6 @@ const MajorsList = ({ data }) => {
     )
 }
 export default MajorsList
+
+
+
