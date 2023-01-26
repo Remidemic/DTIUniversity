@@ -16,10 +16,8 @@ function App() {
 
   const searchSchool = (event) => {
     if (event.key === 'Enter') {
-
       axios.get(url).then((response) => {
         setData(response.data)
-
         // console.log(response.data.results[0].latest.programs)
         console.log(response.data.results[0].latest)
       })

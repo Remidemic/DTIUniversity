@@ -12,6 +12,8 @@ function About() {
                 20 years after entering school, half of the student borrowers still owe $20,000 each on outstanding loan balances.
             </p>
 
+            <p> dont be discouraged from going to the school of your dreams. but dont persue a degree that cant pay what it costs to complete</p>
+
         </>
     )
 }
