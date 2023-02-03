@@ -1,6 +1,5 @@
 import React from "react"
-// import MajorIncome from "../junk/MajorIncome";
-
+import classes from "./MajorsList.module.css"
 const MajorsList = ({ data, onMajorHandler, onKeyHandler }) => {
 
 
@@ -23,7 +22,7 @@ const MajorsList = ({ data, onMajorHandler, onKeyHandler }) => {
                             ) { return <>$$</> }
                         }
                         return (
-                            <div className='majorList'
+                            <div className={classes.majorList}
                                 key={key}
                                 onClick={() => {
                                     onKeyHandler({ key });

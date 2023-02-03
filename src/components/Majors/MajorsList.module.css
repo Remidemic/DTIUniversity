@@ -20,3 +20,11 @@
   color: #ad5502;
   font-size: 1.25rem;
 }
+
+
+.majorList{
+    font-size: 10px;
+}
+
+.majorList:hover { color: pink; }
+.majorList:active { color: blue; }
