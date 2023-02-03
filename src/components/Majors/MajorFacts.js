@@ -5,13 +5,16 @@ function MajorFacts({ majorPick, keyPick }) {
 
     if ((majorPick.major !== undefined) && (keyPick !== undefined)) {
 
+        // console.log(majorPick.major.earnings.highest["1_yr"].overall_median_earnings)
+
         return <>
-
             <div className={classes.frame}>
-
-            <p>major Key: {keyPick}</p>
-            <p>major Title: {majorPick.major.title}</p>
-            <p>median earnings: {majorPick.major.earnings.highest["1_yr"].nonmale_median_earning}</p>
+                <p>Program Major {keyPick}: {majorPick.major.title}</p>
+                <p>Certificate: {majorPick.major.credential.title}</p>
+                <p>overall median earnings:</p>
+                <p>1st yr: ${majorPick.major.earnings.highest["1_yr"].overall_median_earnings}</p>
+                <p>2nd yr: ${majorPick.major.earnings.highest["2_yr"].overall_median_earnings}</p>
+                <p>3rd yr: ${majorPick.major.earnings.highest["3_yr"].overall_median_earnings}</p>
             </div>
         </>
     }
