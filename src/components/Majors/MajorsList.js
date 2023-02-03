@@ -1,34 +1,27 @@
-import React, { useState } from "react"
+import React from "react"
 
-const MajorsList = ({ data }) => {
-
-
-    // // 
-    // const [majorPick, setMajorPick] = useState('');
-    // <DetailsCard majorPick={majorPick}/>
-
-
-    // const logoutHandler = () => {
-    //     setIsLoggedIn(false);
-    // };
-
-    // { isLoggedIn && <Home onLogout={logoutHandler} /> }
+const MajorsList = ({ data, onMajorHandler, onKeyHandler }) => {
 
     return (
         <>
             {data.results ?
                 <div>
                     <p> Full list of
-                        <a href=''> {data.results[0].latest.programs.cip_4_digit.length} </a>
+                        <button> {data.results[0].latest.programs.cip_4_digit.length} </button>
                         programs listed</p>
                     <br />
                     {data.results[0].latest.programs.cip_4_digit.map((major, index) => {
                         const key = index;
                         return (
-
-                            <div className='majorList' key={key} onClick={() => {
-                                console.log({ key })
-                            }} >
+                            <div className='majorList'
+                            key={key}
+                            onClick={() => {
+                                onKeyHandler({key});
+                                onMajorHandler({major});
+                                console.log({major})
+                                console.log(key)
+                            }} 
+                            >
                                 {key} - {major.title} {major.credential.title}
                             </div>
                         )

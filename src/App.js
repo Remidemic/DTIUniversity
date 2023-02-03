@@ -1,10 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
-import MajorsList from './components/MajorsList';
+import MajorsList from './components/Majors/MajorsList';
 import SchoolFacts from './components/SchoolFacts';
+import MajorFacts from './components/Majors/MajorFacts';
 import Navbar from './components/Navbar';
-import DetailsCard from './components/DetailsCard';
+
 
 function App() {
 
@@ -12,17 +13,30 @@ function App() {
   const [data, setData] = useState({})
   const [school, setSchool] = useState('')
 
+  const [major, setMajor] = useState({})
+  const [key, setKey] = useState({})
+
+
+
   const url = `https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${school}&api_key=${MY_KEY}`
 
   const searchSchool = (event) => {
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
         setData(response.data)
-        // console.log(response.data.results[0].latest.programs)
         console.log(response.data.results[0].latest)
       })
     }
   }
+
+  const setMajorHandler = ({ major}) => {
+    setMajor({ major});
+  }
+  const setKeyHandler = ({ key}) => {
+    setKey(key);
+    console.log(key);
+  }
+
 
   return (
     <div className="App">
@@ -35,9 +49,22 @@ function App() {
           placeholder='Enter School'
           type="text" />
       </div>
+
       <SchoolFacts data={data} />
-      <DetailsCard/>
-      <MajorsList data={data} />
+
+      <MajorFacts
+                data={data}
+                majorPick={major}
+                keyPick={key}
+            />
+
+            
+      <MajorsList 
+      data={data} 
+      onMajorHandler={setMajorHandler}
+      onKeyHandler={setKeyHandler}
+      
+      />
     </div>
   );
 }

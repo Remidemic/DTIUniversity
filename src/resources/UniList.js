@@ -1,681 +1,681 @@
 
-// // instructions  https://www.npmjs.com/package/react-search-autocomplete
+// instructions  https://www.npmjs.com/package/react-search-autocomplete
 
 
-// const Universities = {[
-// 911	A.T.Still University,	
-// 487	Abilene Christian University,
-// 1428 Abraham Baldwin Agricultural College,
-// 496	Academy of Art University,
-// 965	Adams State University,
-// 451	Adelphi University,
-// 1547 Adler Graduate School,
-// 1215 Adler University,
-// 1097 Adrian College,	
-// 1216 AdventHealth University,	
-// 539	Agnes Scott College,	
-// 1227 Air Force Institute of Technology,
-// 898	Alabama A & M University
-// 835	Alabama State University	Montgomery
-// 1680	Alaska Bible College	Palmer
-// 1073	Alaska Pacific University	Anchorage
-// 1549	Albany College of Pharmacy and Health Sciences	Albany
-// 1138	Albany Law School	Albany
-// 787	Albany Medical College	Albany
-// 1029	Albany State University	Albany
-// 1288	Albertus Magnus College	New Haven
-// 661	Albion College	Albion
-// 1025	Albright College	Reading
-// 1149	Alcorn State University	Lorman
-// 1446	Alderson Broaddus University	Philippi
-// 1087	Alfred State College	Alfred
-// 605	Alfred University	Alfred
-// 1510	Alice Lloyd College	Pippa Passes
-// 731	Allegheny College	Meadville
-// 1648	Allen College	Waterloo
-// 1663	Allen University	Columbia
-// 855	Alliant International University	San Diego ...
-// 1009	Alma College	Alma
-// 972	Alvernia University	Reading
-// 979	Alverno College	Milwaukee
-// 1545	Amberton University	Garland
-// 1595	American Baptist College	Nashville
-// 1669	American Film Institute Conservatory	Los Angeles
-// 1144	American International College	Springfield
-// 1171	American Jewish University	Los Angeles ...
-// 107	American University	Washington
-// 227	Amherst College	Amherst
-// 1195	Anderson University	Anderson
-// 999	Anderson University, Indiana	Anderson ...
-// 455	Andrews University	Berrien Springs
-// 630	Angelo State University	San Angelo
-// 1373	Anna Maria College	Paxton
-// 512	Antioch University	Yellow Springs ...
-// Un	Antioch University Los Angeles	Culver City
-// Un	Antioch University New England	Keene
-// Un	Antioch University Santa Barbara	Santa Barbara
-// Un	Antioch University Seattle	Seattle
-// 1658	Appalachian Bible College	Mount Hope
-// 1657	Appalachian College of Pharmacy	Oakwood
-// 197	Appalachian State University	Boone
-// 1064	Aquinas College	Grand Rapids
-// 1631	Aquinas College, Tennessee	Nashville
-// 610	Arcadia University	Glenside
-// 1470	Arizona Christian University	Phoenix
-// 28	Arizona State University	Tempe ...
-// 1619	Arkansas Baptist College	Little Rock
-// 396	Arkansas State University	Jonesboro
-// 760	Arkansas Tech University	Russellville
-// 1722	Arlington Baptist University	Arlington
-// 1558	Art Academy of Cincinnati	Cincinnati
-// 442	ArtCenter College of Design	Pasadena
-// 1111	Asbury University	Wilmore
-// 600	Ashland University	Ashland
-// 696	Assumption College	Worcester
-// 1142	Athens State University	Athens
-// 1606	Atlanta Metropolitan State College	Atlanta
-// 116	Auburn University	Auburn
-// 846	Auburn University at Montgomery	Montgomery
-// 595	Augsburg University	Minneapolis
-// 362	Augusta University	Augusta
-// 688	Augustana College	Rock Island
-// 747	Augustana University	Sioux Falls
-// 893	Aurora University	Aurora ...
-// 882	Austin College	Sherman
-// 603	Austin Peay State University	Clarksville
-// 1191	Ave Maria University	Ave Maria
-// 1321	Averett University	Danville ...
-// 1169	Avila University	Kansas City
-// 387	Azusa Pacific University	Azusa
-// 290	Babson College	Babson Park
-// 1607	Bacone College	Muskogee
-// 790	Baker College	Flint ...
-// 1031	Baker University	Baldwin City
-// 672	Baldwin Wallace University	Berea
-// 245	Ball State University	Muncie
-// 902	Bank Street College of Education	New York City
-// 1724	Baptist Bible College	Springfield
-// 1693	Baptist Health Sciences University	Memphis
-// 1714	Baptist University of the Americas	San Antonio
-// 1556	Barclay College	Haviland
-// 206	Bard College	Annandale - on - Hudson
-// 1041	Bard College at Simon's Rock	Great Barrington
-// 318	Barnard College	New York City
-// 584	Barry University	Miami ...
-// 1308	Barton College	Wilson
-// 1580	Baruch College, CUNY	New York City
-// 771	Bastyr University	Kenmore
-// 361	Bates College	Lewiston
-// 1141	Bay Path University	Longmeadow
-// 1539	Bay State College	Boston ...
-// 193	Baylor College of Medicine	Houston
-// 114	Baylor University	Waco
-// 1485	Beacon College	Leesburg
-// 1526	Becker College	Worcester ...
-// 1063	Belhaven University	Jackson
-// 577	Bellarmine University	Louisville
-// 754	Bellevue College	Bellevue
-// 641	Bellevue University	Bellevue ...
-// 1716	Bellin College	Green Bay
-// 1173	Belmont Abbey College	Belmont
-// 498	Belmont University	Nashville
-// 508	Beloit College	Beloit
-// 861	Bemidji State University	Bemidji
-// 1328	Benedict College	Columbia
-// 1126	Benedictine College	Atchison
-// 666	Benedictine University	Lisle
-// 1589	Benjamin Franklin Institute of Technology	Boston
-// 966	Bennett College	Greensboro
-// 655	Bennington College	Bennington
-// 378	Bentley University	Waltham
-// 505	Berea College	Berea
-// 1271	Berkeley College	New York City ...
-// 210	Berklee College of Music	Boston
-// 722	Berry College	Mount Berry
-// 1423	Bethany College	Bethany
-// 1564	Bethany College, Kansas	Lindsborg
-// 1572	Bethany Lutheran College	Mankato
-// 1120	Bethel College	North Newton
-// 1379	Bethel University	Mishawaka
-// 632	Bethel University	Saint Paul ...
-// 1533	Bethel University, Tennessee	McKenzie
-// 1715	Bethesda University	Anaheim
-// 848	Bethune - Cookman University	Daytona Beach
-// 1726	Beulah Heights University	Atlanta
-// 166	Binghamton University, State University of New York	Vestal
-// 344	Biola University	La Mirada
-// 1099	Birmingham - Southern College	Birmingham
-// 1369	Bismarck State College	Bismarck
-// 983	Black Hills State University	Spearfish
-// 1515	Blackburn College	Carlinville
-// 1646	Blessing - Rieman College of Nursing and Health Sciences	Quincy
-// 1324	Bloomfield College	Bloomfield
-// 587	Bloomsburg University of Pennsylvania	Bloomsburg
-// 1616	Blue Mountain College	Blue Mountain
-// 1340	Bluefield College	Bluefield
-// 1617	Bluefield State College	Bluefield
-// 592	Bluffton University	Bluffton
-// 671	Bob Jones University	Greenville
-// 1690	Boise Bible College	Boise ...
-// 201	Boise State University	Boise
-// 1703	Boricua College	New York City
-// 1014	Boston Architectural College	Boston
-// 95	Boston College	Chestnut Hill
-// 1612	Boston Graduate School of Psychoanalysis	Brookline ...
-// 40	Boston University	Boston ...
-// 268	Bowdoin College	Brunswick
-// 836	Bowie State University	Bowie
-// 170	Bowling Green State University	Bowling Green ...
-// 381	Bradley University	Peoria
-// 124	Brandeis University	Waltham
-// 1474	Brazosport College	Lake Jackson
-// 1089	Brenau University	Gainesville
-// 1346	Brescia University	Owensboro
-// 1274	Brevard College	Brevard
-// 1518	Brewton - Parker College	Mount Vernon
-// 1331	Briar Cliff University	Sioux City
-// 917	Bridgewater College	Bridgewater
-// 445	Bridgewater State University	Bridgewater
-// 60	Brigham Young University	Provo
-// 832	Brigham Young University - Hawaii	Laie
-// 317	Brigham Young University - Idaho	Rexburg
-// 1591	Brooklyn College	Brooklyn
-// 691	Brooklyn Law School	Brooklyn
-// 514	Broward College	Fort Lauderdale
-// 56	Brown University	Providence
-// 1249	Bryan College	Dayton ...
-// 1705	Bryan College of Health Sciences	Lincoln
-// 1157	Bryant and Stratton College	Buffalo ...
-// 638	Bryant University	Smithfield
-// 1662	Bryn Athyn College	Bryn Athyn
-// 216	Bryn Mawr College	Bryn Mawr
-// 230	Bucknell University	Lewisburg
-// 931	Buena Vista University	Storm Lake
-// 1320	Buffalo State College	Buffalo
-// 1604	Bushnell University	Eugene
-// 417	Butler University	Indianapolis
-// Un	Cabarrus College of Health Sciences	Concord
-// 1208	Cabrini University	Radnor
-// 1453	Cairn University	Langhorne ...
-// 1160	Caldwell University	Caldwell
-// 793	California Baptist University	Riverside ...
-// 611	California College of the Arts	San Francisco ...
-// 648	California Institute of Integral Studies	San Francisco
-// 53	California Institute of Technology	Pasadena
-// 468	California Institute of the Arts	Valencia
-// 618	California Lutheran University	Thousand Oaks
-// 160	California Polytechnic State University, San Luis Obispo	San Luis Obispo
-// 238	California State Polytechnic University, Pomona	Pomona
-// 652	California State University Channel Islands	Camarillo
-// 1096	California State University Maritime Academy	Vallejo
-// 363	California State University San Marcos	San Marcos ...
-// 646	California State University, Bakersfield	Bakersfield
-// 198	California State University, Chico	Chico
-// 338	California State University, Dominguez Hills	Carson ...
-// 490	California State University, East Bay	Hayward ...
-// 275	California State University, Fresno	Fresno
-// 168	California State University, Fullerton	Fullerton ...
-// 169	California State University, Long Beach	Long Beach
-// 343	California State University, Los Angeles	Los Angeles
-// 533	California State University, Monterey Bay	Seaside
-// 120	California State University, Northridge	Northridge
-// 221	California State University, Sacramento	Sacramento
-// 266	California State University, San Bernardino	San Bernardino ...
-// 404	California State University, Stanislaus	Turlock ...
-// 930	California University of Pennsylvania	California
-// 1137	California Western School of Law	San Diego
-// 1536	Calumet College of St.Joseph	Whiting
-// 1674	Calvary University	Kansas City
-// 225	Calvin University	Grand Rapids
-// 1123	Cambridge College	Boston ...
-// 977	Cameron University	Lawton ...
-// 569	Campbell University	Buies Creek
-// 1017	Campbellsville University	Campbellsville
-// 615	Canisius College	Buffalo
-// 683	Capital University	Columbus
-// 813	Capitol Technology University	Laurel
-// 1094	Cardinal Stritch University	Milwaukee
-// 190	Carleton College	Northfield
-// 1295	Carlow University	Pittsburgh
-// 25	Carnegie Mellon University	Pittsburgh ...
-// 1576	Carolina University	Winston Salem ...
-// 988	Carroll College	Helena
-// 903	Carroll University	Waukesha ...
-// 583	Carson - Newman University	Jefferson City
-// 789	Carthage College	Kenosha
-// 111	Case Western Reserve University	Cleveland
-// 1292	Castleton University	Castleton
-// 1242	Catawba College	Salisbury
-// 1433	Cazenovia College	Cazenovia
-// 1136	Cedar Crest College	Allentown
-// 568	Cedarville University	Cedarville
-// 950	Centenary College of Louisiana	Shreveport
-// 1205	Centenary University	Hackettstown
-// 1628	Central Baptist College	Conway
-// 1566	Central Christian College of Kansas	McPherson
-// 1672	Central Christian College of the Bible	Moberly ...
-// 633	Central College	Pella
-// 358	Central Connecticut State University	New Britain
-// 1258	Central Methodist University	Fayette
-// 244	Central Michigan University	Mount Pleasant
-// 1507	Central Penn College	Summerdale
-// 1098	Central State University	Wilberforce
-// 339	Central Washington University	Ellensburg ...
-// 1503	Centralia College	Centralia
-// 829	Centre College	Danville
-// 875	Chadron State College	Chadron
-// 1010	Chamberlain University	Addison ...
-// 895	Chaminade University of Honolulu	Honolulu
-// 530	Champlain College	Burlington ...
-// 234	Chapman University	Orange
-// 1209	Charles R.Drew University of Medicine and Science	Los Angeles
-// 877	Charleston Southern University	Charleston
-// 704	Chatham University	Pittsburgh
-// 1293	Chestnut Hill College	Philadelphia
-// 1338	Cheyney University of Pennsylvania	Cheyney
-// 794	Chicago State University	Chicago
-// 1624	Chipola College	Marianna
-// 1275	Chowan University	Murfreesboro
-// 908	Christian Brothers University	Memphis
-// 531	Christopher Newport University	Newport News
-// 1023	City University of Seattle	Seattle ...
-// 1349	Claflin University	Orangeburg
-// 481	Claremont Graduate University	Claremont ...
-// 517	Claremont McKenna College	Claremont
-// 811	Clarion University of Pennsylvania	Clarion
-// 659	Clark Atlanta University	Atlanta
-// 224	Clark University	Worcester
-// 1143	Clarke University	Dubuque
-// 1504	Clarks Summit University	Clarks Summit
-// 1462	Clarkson College	Omaha
-// 376	Clarkson University	Potsdam ...
-// 891	Clayton State University	Morrow
-// 1718	Clear Creek Baptist Bible College	Pineville
-// 1484	Cleary University	Howell ...
-// 105	Clemson University	Clemson
-// 1122	Cleveland Institute of Art	Cleveland
-// 1236	Cleveland Institute of Music	Cleveland
-// 264	Cleveland State University	Cleveland
-// 1531	Cleveland University - Kansas City	Overland Park
-// 522	Coastal Carolina University	Conway ...
-// 944	Coe College	Cedar Rapids
-// 1437	Coker University	Hartsville
-// 260	Colby College	Waterville
-// 1253	Colby - Sawyer College	New London
-// 354	Colgate University	Hamilton
-// 1038	College for Creative Studies	Detroit
-// 1700	College of Biblical Studies	Houston ...
-// 1339	College of Central Florida	Ocala
-// 272	College of Charleston	Charleston
-// 1555	College of Coastal Georgia	Brunswick
-// 1343	College of Mount Saint Vincent	The Bronx
-// 1387	College of Our Lady of the Elms	Chicopee
-// 380	College of Saint Benedict / Saint John's University	St. Joseph ...
-// 1278	College of Saint Mary	Omaha
-// 798	College of Southern Nevada	Las Vegas
-// 1701	College of Staten Island	Staten Island
-// 1047	College of the Atlantic	Bar Harbor
-// 355	College of the Holy Cross	Worcester
-// 1060	College of the Ozarks	Point Lookout
-// 135	College of William & Mary	Williamsburg
-// 653	Colorado Christian University	Lakewood
-// 379	Colorado College	Colorado Springs ...
-// 741	Colorado Mesa University	Grand Junction
-// 321	Colorado School of Mines	Golden
-// 62	Colorado State University	Fort Collins
-// 996	Colorado State University - Pueblo	Pueblo ...
-// 701	Colorado Technical University	Colorado Springs ...
-// 1378	Columbia Basin College	Pasco
-// 800	Columbia College	Columbia
-// 425	Columbia College Chicago	Chicago
-// 1568	Columbia College Hollywood	Tarzana
-// 1302	Columbia College, South Carolina	Columbia
-// 1269	Columbia International University	Columbia
-// 8	Columbia University in the City of New York	New York City
-// 1132	Columbus College of Art and Design	Columbus
-// 709	Columbus State University	Columbus
-// 1238	Concord University	Athens
-// 695	Concordia College	Moorhead
-// 1367	Concordia College - New York	Bronxville
-// 1451	Concordia University Ann Arbor	Ann Arbor
-// 1164	Concordia University Chicago	River Forest
-// 844	Concordia University Irvine	Irvine
-// 871	Concordia University Texas	Austin
-// 803	Concordia University Wisconsin	Mequon
-// 1153	Concordia University, Nebraska	Seward
-// 729	Concordia University, St.Paul	Saint Paul
-// 407	Connecticut College	New London
-// 1187	Converse College	Spartanburg
-// 1678	Conway School of Landscape Design	Northampton
-// 1068	Coppin State University	Baltimore
-// 1404	Corban University	Salem
-// 733	Cornell College	Mount Vernon
-// 4	Cornell University	Ithaca
-// 986	Cornerstone University	Grand Rapids
-// 1167	Cornish College of the Arts	Seattle
-// 1573	Cottey College	Nevada
-// 1267	Covenant College	Lookout Mountain
-// 1679	Cox College	Springfield
-// 1412	Cranbrook Academy of Art	Bloomfield Hills
-// 242	Creighton University	Omaha
-// 1565	Criswell College	Dallas
-// 1729	Crowley's Ridge College	Paragould
-// 1159	Crown College	St.Bonifacius ...
-// 1422	Culver - Stockton College	Canton
-// 1472	Cumberland University	Lebanon
-// 1745	CUNY School of Law	Long Island City
-// 1156	Curry College	Milton
-// 894	Curtis Institute of Music	Philadelphia
-// 1075	Daemen College	Amherst
-// 662	Dakota State University	Madison ...
-// 1322	Dakota Wesleyan University	Mitchell
-// 927	Dallas Baptist University	Dallas
-// 1608	Dallas Christian College	Dallas
-// 1214	Dalton State College	Dalton
-// 70	Dartmouth College	Hanover
-// 949	Davenport University	Grand Rapids ...
-// 324	Davidson College	Davidson
-// 1570	Davis and Elkins College	Elkins
-// 1671	Davis College	Johnson City ...
-// 1046	Daytona State College	Daytona Beach
-// 1357	Dean College	Franklin
-// 1427	Defiance College	Defiance
-// 518	Delaware State University	Dover
-// 1108	Delaware Valley University	Doylestown
-// 985	Delta State University	Cleveland
-// 506	Denison University	Granville
-// 1741	Denver College of Nursing	Denver
-// 148	DePaul University	Chicago
-// 390	DePauw University	Greencastle
-// 959	Des Moines University	Des Moines
-// 864	DeSales University	Center Valley
-// 414	DeVry University	Chicago ...
-// 1696	Dharma Realm Buddhist University	Ukiah
-// 279	Dickinson College	Carlisle
-// 1480	Dickinson State University	Dickinson
-// 859	Dillard University	New Orleans
-// 1057	Doane University	Crete
-// 1501	Dominican College	Orangeburg
-// 1682	Dominican School of Philosophy & Theology	Berkeley
-// 863	Dominican University	River Forest
-// 677	Dominican University of California	San Rafael
-// 1655	Donnelly College	Kansas City
-// 1013	Dordt University	Sioux Center
-// 415	Drake University	Des Moines
-// 388	Drew University	Madison
-// 94	Drexel University	Philadelphia
-// 826	Drury University	Springfield ...
-// 30	Duke University	Durham
-// 1473	Dunwoody College of Technology	Minneapolis
-// 292	Duquesne University	Pittsburgh
-// 1058	D'Youville College	Buffalo
-// 315	Earlham College	Richmond
-// 229	East Carolina University	Greenville
-// 1135	East Central University	Ada
-// 1284	East Georgia State College	Swainsboro ...
-// 874	East Stroudsburg University	East Stroudsburg
-// 284	East Tennessee State University	Johnson City ...
-// 1389	East Texas Baptist University	Marshall
-// 831	Eastern Connecticut State University	Willimantic
-// 371	Eastern Illinois University	Charleston
-// 278	Eastern Kentucky University	Richmond
-// 768	Eastern Mennonite University	Harrisonburg ...
-// 295	Eastern Michigan University	Ypsilanti ...
-// 1273	Eastern Nazarene College	Quincy
-// 812	Eastern New Mexico University	Portales
-// 783	Eastern Oregon University	La Grande
-// 884	Eastern University	St.Davids
-// 647	Eastern Virginia Medical School	Norfolk
-// 486	Eastern Washington University	Cheney
-// 1697	East - West University	Chicago
-// 1733	Ecclesia College	Springdale
-// 743	Eckerd College	Saint Petersburg ...
-// 886	ECPI University	Virginia Beach
-// 1012	Edgewood College	Madison
-// 862	Edinboro University of Pennsylvania	Edinboro
-// 1168	Edward Waters University	Jacksonville
-// 1237	Elizabeth City State University	Elizabeth City
-// 575	Elizabethtown College	Elizabethtown
-// 554	Elmhurst University	Elmhurst
-// 1085	Elmira College	Elmira
-// 281	Elon University	Elon
-// 253	Embry - Riddle Aeronautical University	Daytona Beach ...
-// 369	Emerson College	Boston
-// 1043	Emmanuel College	Boston
-// 1598	Emmanuel College, Georgia	Franklin Springs
-// 1584	Emmaus Bible College	Dubuque
-// 1307	Emory & Henry College	Emory ...
-// 80	Emory University	Atlanta
-// 475	Emporia State University	Emporia
-// 858	Endicott College	Beverly
-// 1333	Erskine College	Due West
-// 1548	Eureka College	Eureka ...
-// 1005	Evangel University	Springfield
-// 1597	Everglades University	Boca Raton ...
-// 441	Fairfield University	Fairfield
-// 395	Fairleigh Dickinson University	Teaneck ...
-// 1294	Fairmont State University	Fairmont
-// 1487	Faith Baptist Bible College and Theological Seminary	Ankeny
-// 941	Farmingdale State College	Farmingdale
-// 333	Fashion Institute of Technology	New York City
-// 1147	Faulkner University	Montgomery
-// 748	Fayetteville State University	Fayetteville
-// 1316	Felician University	Lodi ...
-// 277	Ferris State University	Big Rapids
-// 1161	Ferrum College	Ferrum
-// 1210	Fielding Graduate University	Santa Barbara
-// 1368	Finlandia University	Hancock
-// 1560	Fisher College	Boston ...
-// 715	Fisk University	Nashville
-// 1059	Fitchburg State University	Fitchburg
-// 1677	Five Towns College	Dix Hills
-// 796	Flagler College	St.Augustine ...
-// 493	Florida Agricultural and Mechanical University	Tallahassee
-// 142	Florida Atlantic University	Boca Raton ...
-// 1613	Florida College	Temple Terrace
-// 1656	Florida Gateway College	Lake City
-// 411	Florida Gulf Coast University	Fort Myers
-// 301	Florida Institute of Technology	Melbourne
-// 99	Florida International University	Miami
-// 1385	Florida Memorial University	Miami Gardens
-// 1380	Florida National University	Hialeah
-// 763	Florida Southern College	Lakeland
-// 1272	Florida SouthWestern State College	Fort Myers
-// 854	Florida State College at Jacksonville	Jacksonville
-// 72	Florida State University	Tallahassee ...
-// 1285	Fontbonne University	St.Louis
-// 91	Fordham University	The Bronx ...
-// 511	Fort Hays State University	Hays
-// 680	Fort Lewis College	Durango
-// 1133	Fort Valley State University	Fort Valley
-// 967	Framingham State University	Framingham
-// 956	Francis Marion University	Florence
-// 1637	Franciscan Missionaries of Our Lady University	Baton Rouge
-// 916	Franciscan University of Steubenville	Steubenville
-// 440	Franklin and Marshall College	Lancaster
-// 1198	Franklin College	Franklin
-// 1211	Franklin Pierce University	Rindge ...
-// 639	Franklin University	Columbus ...
-// 837	Franklin W.Olin College of Engineering	Needham
-// 1262	Freed - Hardeman University	Henderson
-// 938	Fresno Pacific University	Fresno ...
-// 1196	Friends University	Wichita ...
-// 492	Frostburg State University	Frostburg ...
-// 341	Furman University	Greenville
-// 312	Gallaudet University	Washington
-// 933	Gannon University	Erie
-// 1181	Gardner - Webb University	Boiling Springs ...
-// Un	Geisinger Commonwealth School of Medicine	Scranton
-// 976	Geneva College	Beaver Falls
-// 628	George Fox University	Newberg
-// 63	George Mason University	Fairfax
-// 65	George Washington University	Washington ...
-// 945	Georgetown College	Georgetown
-// 47	Georgetown University	Washington
-// 593	Georgia College and State University	Milledgeville ...
-// 1200	Georgia Gwinnett College	Lawrenceville
-// 48	Georgia Institute of Technology	Atlanta
-// 287	Georgia Southern University	Statesboro ...
-// 1206	Georgia Southwestern State University	Americus
-// 83	Georgia State University	Atlanta
-// 1104	Georgian Court University	Lakewood
-// 384	Gettysburg College	Gettysburg
-// 1582	Glenville State College	Glenville
-// 1090	Goddard College	Plainfield ...
-// 1698	God's Bible School and College	Cincinnati
-// 564	Golden Gate University	San Francisco ...
-// 1376	Goldey - Beacom College	Wilmington
-// 1666	Goldfarb School of Nursing at Barnes - Jewish College	St.Louis
-// 349	Gonzaga University	Spokane
-// 1737	Good Samaritan College of Nursing and Health Science	Cincinnati
-// 1306	Goodwin University	East Hartford
-// 681	Gordon College	Wenham ...
-// 1550	Gordon State College	Barnesville
-// 667	Goshen College	Goshen
-// 532	Goucher College	Towson
-// 776	Governors State University	University Park
-// 1673	Grace Christian University	Wyoming
-// 1042	Grace College	Winona Lake ...
-// 1148	Graceland University	Lamoni
-// 910	Grambling State University	Grambling
-// 240	Grand Canyon University	Phoenix
-// 218	Grand Valley State University	Allendale ...
-// 1234	Grand View University	Des Moines
-// 1476	Granite State College	Concord
-// 1654	Gratz College	Melrose Park
-// 1345	Great Basin College	Elko ...
-// 1704	Great Lakes Christian College	Lansing
-// 1553	Greensboro College	Greensboro
-// 1145	Greenville University	Greenville
-// 373	Grinnell College	Grinnell
-// 823	Grove City College	Grove City
-// 878	Guilford College	Greensboro
-// 1335	Gulf Coast State College	Panama City
-// 541	Gustavus Adolphus College	St.Peter
-// 929	Gwynedd Mercy University	Gwynedd Valley
-// 359	Hamilton College	Clinton
-// 497	Hamline University	Saint Paul
-// 899	Hampden - Sydney College	Hampden - Sydney
-// 435	Hampshire College	Amherst
-// 552	Hampton University	Hampton
-// 1492	Hannibal - LaGrange University	Hannibal
-// 342	Hanover College	Hanover
-// 640	Harding University	Searcy ...
-// 1102	Hardin - Simmons University	Abilene
-// 1264	Harrisburg University of Science and Technology	Harrisburg
-// 1497	Harris - Stowe State University	St.Louis
-// 928	Hartwick College	Oneonta
-// 2	Harvard University	Cambridge
-// 286	Harvey Mudd College	Claremont ...
-// 1286	Hastings College	Hastings
-// 365	Haverford College	Haverford
-// 727	Hawaii Pacific University	Honolulu
-// 1434	Hebrew College	Newton Centre
-// 1062	Heidelberg University	Tiffin
-// 1746	Helene Fuld College of Nursing	New York City
-// 1101	Henderson State University	Arkadelphia
-// 737	Hendrix College	Conway
-// 1707	Heritage Christian University	Florence
-// 1359	Heritage University	Toppenish
-// 881	Herzing University	Madison
-// 596	High Point University	High Point
-// 1413	Hilbert College	Hamburg
-// 364	Hillsdale College	Hillsdale
-// 1003	Hiram College	Hiram
-// 429	Hobart and William Smith Colleges	Geneva
-// 1398	Hodges University	Naples
-// 241	Hofstra University	Hempstead
-// 892	Hollins University	Roanoke
-// 1603	Holy Apostles College and Seminary	Cromwell
-// 1543	Holy Cross College	Notre Dame
-// 1469	Holy Family University	Philadelphia
-// 1290	Holy Names University	Oakland
-// 678	Hood College	Frederick
-// 428	Hope College	Holland
-// 1420	Hope International University	Fullerton
-// 1093	Houghton College	Houghton ...
-// 720	Houston Baptist University	Houston
-// 1455	Howard Payne University	Brownwood
-// 222	Howard University	Washington
-// 479	Hult International Business School	Cambridge ...
-// 263	Humboldt State University	Arcata
-// 1638	Humphreys University	Stockton
-// 1083	Hunter College, CUNY	New York City
-// 1251	Huntingdon College	Montgomery
-// 1166	Huntington University	Huntington ...
-// 958	Husson University	Bangor
-// 1241	Huston - Tillotson University	Austin
-// 529	Icahn School of Medicine at Mount Sinai	New York City
-// 274	Idaho State University	Pocatello ...
-// 1247	Illinois College	Jacksonville
-// 1644	Illinois College of Optometry	Chicago
-// 171	Illinois Institute of Technology	Chicago
-// 232	Illinois State University	Normal
-// 538	Illinois Wesleyan University	Bloomington
-// 1154	Immaculata University	Immaculata ...
-// 1281	Indian River State College	Fort Pierce ...
-// 1250	Indiana Institute of Technology	Fort Wayne ...
-// 319	Indiana State University	Terre Haute
-// 136	Indiana University - Purdue University Indianapolis	Indianapolis
-// 43	Indiana University Bloomington	Bloomington
-// 1460	Indiana University East	Richmond
-// 1749	Indiana University Fort Wayne	Fort Wayne
-// 1569	Indiana University Kokomo	Kokomo
-// 1020	Indiana University Northwest	Gary
-// 368	Indiana University of Pennsylvania	Indiana
-// 810	Indiana University South Bend	South Bend ...
-// 867	Indiana University Southeast	New Albany
-// 702	Indiana Wesleyan University	Marion
-// 868	Iona College	New Rochelle
-// 58	Iowa State University	Ames
-// 1602	Iowa Wesleyan University	Mount Pleasant
-// Un	Irell and Manella Graduate School of Biological Sciences	Duarte
-// 269	Ithaca College	Ithaca
-// 650	Jackson State University	Jackson
-// 625	Jacksonville State University	Jacksonville
-// 728	Jacksonville University	Jacksonville
-// 183	James Madison University	Harrisonburg
-// 1711	Jamestown Business College	Jamestown
-// 1593	Jarvis Christian College	Hawkins
-// 946	John Brown University	Siloam Springs
-// 654	John Carroll University	University Heights
-// 1329	John F.Kennedy University	Pleasant Hill ...
-// 1071	John Jay College of Criminal Justice	New York City
-// 1676	John Paul the Great Catholic University	Escondido
-// 15	Johns Hopkins University	Baltimore ...
-// 431	Johnson and Wales University	Providence ...
-// 1202	Johnson C.Smith University	Charlotte
-// 1527	Johnson University	Knoxville ...
-// 1615	Judson College	Marion
-// 1397	Judson University	Elgin ...
-// 795	Juniata College	Huntingdon
-// 598	Kalamazoo College	Kalamazoo
-// 1260	Kansas City Art Institute	Kansas City
-// 1362	Kansas City University	Kansas City
-// 140	Kansas State University	Manhattan ...
-// 1449	Kansas Wesleyan University	Salina
-// 546	Kean University	Union ...
-// 948	Keck Graduate Institute	Claremont
-// 732	Keene State College	Keene
-// 782	Keiser University	Fort Lauderdale
-// 211	Kennesaw State University	Kennesaw ...
-// 131	Kent State University	Kent ...
-// 1623	Kentucky Christian University	Grayson
-// 816	Kentucky State University	Frankfort
-// 1454	Kentucky Wesleyan College	Owensboro
-// 282	Kenyon College	Gambier
-// 1643	Kettering College	Kettering
-// 591	Kettering University	Flint
-// 1312	Keuka College	Keuka Park
-// 1441	Keystone College	La Plume
-// 1030	King University	Bristol
-// 770	King's College	Wilkes-Barre
-// 703	Knox College	Galesburg ...
-// 658	Kutztown University of Pennsylvania	Kutztown
-// 1649	Kuyper College	Grand Rapids
-// 1408	La Roche University	Pittsburgh
-// 588	La Salle University	Philadelphia
-// 1091	La Sierra University	Riverside
+const Universities = [
+"A.T.Still University",	
+"Abilene Christian University",
+"Abraham Baldwin Agricultural College",
+"Academy of Art University",
+"Adams State University",
+"Adelphi University",
+"Adler Graduate School",
+"Adler University",
+"Adrian College",	
+"AdventHealth University",	
+"Agnes Scott College",	
+"Air Force Institute of Technology",
+"Alabama A & M University",
+"Alabama State University",
+"Alaska Bible College",
+"Alaska Pacific University",
+"Albany College of Pharmacy and Health Sciences",
+"Albany Law School",
+"Albany Medical College",
+"Albany State University",
+"Albertus Magnus College",
+"Albion College",
+"Albright College",
+"Alcorn State University",
+"Alderson Broaddus University",
+"Alfred State College",
+"Alfred University",
+"Alice Lloyd College",
+"Allegheny College",
+"Allen College",
+"Allen University",
+"Alliant International University",
+"Alma College",
+"Alvernia University",
+"Alverno College",
+"Amberton University",
+"American Baptist College",
+"American Film Institute Conservatory",
+"American International College",
+"American Jewish University",
+"American University",
+"Amherst College",
+"Anderson University",
+"Andrews University",
+"Angelo State University",
+"Anna Maria College",
+"Antioch University",
+"Antioch University Los Angeles",
+"Antioch University New England",
+"Antioch University Santa Barbara"
+]
+
+// "Antioch University Seattle",
+// Appalachian Bible College	Mount Hope
+// 7	Appalachian College of Pharmacy	Oakwood
+// 	Appalachian State University	Boone
+// 4	Aquinas College	Grand Rapids
+// 1	Aquinas College, Tennessee	Nashville
+// 	Arcadia University	Glenside
+// 0	Arizona Christian University	Phoenix
+// Arizona State University	Tempe ...
+// 	Arkansas Baptist College	Little Rock
+// Arkansas State University	Jonesboro
+// Arkansas Tech University	Russellville
+// 	Arlington Baptist University	Arlington
+// 	Art Academy of Cincinnati	Cincinnati
+// ArtCenter College of Design	Pasadena
+// 	Asbury University	Wilmore
+// Ashland University	Ashland
+// Assumption College	Worcester
+// 	Athens State University	Athens
+// 	Atlanta Metropolitan State College	Atlanta
+// Auburn University	Auburn
+// 	Auburn University at Montgomery	Montgomery
+// 	Augsburg University	Minneapolis
+// 	Augusta University	Augusta
+// 	Augustana College	Rock Island
+// 	Augustana University	Sioux Falls
+// 	Aurora University	Aurora ...
+// 	Austin College	Sherman
+// 	Austin Peay State University	Clarksville
+// 1	Ave Maria University	Ave Maria
+// 1	Averett University	Danville ...
+// 9	Avila University	Kansas City
+// 	Azusa Pacific University	Azusa
+// 	Babson College	Babson Park
+// 7	Bacone College	Muskogee
+// 	Baker College	Flint ...
+// 1	Baker University	Baldwin City
+// 	Baldwin Wallace University	Berea
+// 	Ball State University	Muncie
+// 	Bank Street College of Education	New York City
+// 4	Baptist Bible College	Springfield
+// 3	Baptist Health Sciences University	Memphis
+// 4	Baptist University of the Americas	San Antonio
+// 6	Barclay College	Haviland
+// 	Bard College	Annandale - on - Hudson
+// 1	Bard College at Simon's Rock	Great Barrington
+// 	Barnard College	New York City
+// 	Barry University	Miami ...
+// 8	Barton College	Wilson
+// 	Baruch College, CUNY	New York City
+// Bastyr University	Kenmore
+// Bates College	Lewiston
+// 	Bay Path University	Longmeadow
+// 	Bay State College	Boston ...
+// Baylor College of Medicine	Houston
+// Baylor University	Waco
+// 	Beacon College	Leesburg
+// 	Becker College	Worcester ...
+// 	Belhaven University	Jackson
+// Bellarmine University	Louisville
+// Bellevue College	Bellevue
+// Bellevue University	Bellevue ...
+// 	Bellin College	Green Bay
+// 	Belmont Abbey College	Belmont
+// Belmont University	Nashville
+// Beloit College	Beloit
+// Bemidji State University	Bemidji
+// 	Benedict College	Columbia
+// 	Benedictine College	Atchison
+// Benedictine University	Lisle
+// 	Benjamin Franklin Institute of Technology	Boston
+// Bennett College	Greensboro
+// Bennington College	Bennington
+// Bentley University	Waltham
+// Berea College	Berea
+// 	Berkeley College	New York City ...
+// Berklee College of Music	Boston
+// Berry College	Mount Berry
+// 	Bethany College	Bethany
+// 	Bethany College, Kansas	Lindsborg
+// 	Bethany Lutheran College	Mankato
+// 	Bethel College	North Newton
+// 	Bethel University	Mishawaka
+// Bethel University	Saint Paul ...
+// 3	Bethel University, Tennessee	McKenzie
+// 5	Bethesda University	Anaheim
+// 	Bethune - Cookman University	Daytona Beach
+// 6	Beulah Heights University	Atlanta
+// 	Binghamton University, State University of New York	Vestal
+// 	Biola University	La Mirada
+// 9	Birmingham - Southern College	Birmingham
+// 9	Bismarck State College	Bismarck
+// 	Black Hills State University	Spearfish
+// 5	Blackburn College	Carlinville
+// 6	Blessing - Rieman College of Nursing and Health Sciences	Quincy
+// 4	Bloomfield College	Bloomfield
+// 	Bloomsburg University of Pennsylvania	Bloomsburg
+// 6	Blue Mountain College	Blue Mountain
+// 0	Bluefield College	Bluefield
+// 7	Bluefield State College	Bluefield
+// 	Bluffton University	Bluffton
+// 	Bob Jones University	Greenville
+// 0	Boise Bible College	Boise ...
+// 	Boise State University	Boise
+// 3	Boricua College	New York City
+// 4	Boston Architectural College	Boston
+// Boston College	Chestnut Hill
+// 2	Boston Graduate School of Psychoanalysis	Brookline ...
+// Boston University	Boston ...
+// 	Bowdoin College	Brunswick
+// 	Bowie State University	Bowie
+// 	Bowling Green State University	Bowling Green ...
+// 	Bradley University	Peoria
+// 	Brandeis University	Waltham
+// 	Brazosport College	Lake Jackson
+// 	Brenau University	Gainesville
+// 	Brescia University	Owensboro
+// 	Brevard College	Brevard
+// 	Brewton - Parker College	Mount Vernon
+// 1	Briar Cliff University	Sioux City
+// 	Bridgewater College	Bridgewater
+// 	Bridgewater State University	Bridgewater
+// Brigham Young University	Provo
+// 	Brigham Young University - Hawaii	Laie
+// 	Brigham Young University - Idaho	Rexburg
+// 1	Brooklyn College	Brooklyn
+// 	Brooklyn Law School	Brooklyn
+// 	Broward College	Fort Lauderdale
+// Brown University	Providence
+// 9	Bryan College	Dayton ...
+// 5	Bryan College of Health Sciences	Lincoln
+// 7	Bryant and Stratton College	Buffalo ...
+// 	Bryant University	Smithfield
+// 2	Bryn Athyn College	Bryn Athyn
+// 	Bryn Mawr College	Bryn Mawr
+// 	Bucknell University	Lewisburg
+// 	Buena Vista University	Storm Lake
+// 0	Buffalo State College	Buffalo
+// 4	Bushnell University	Eugene
+// 	Butler University	Indianapolis
+// Cabarrus College of Health Sciences	Concord
+// 8	Cabrini University	Radnor
+// 3	Cairn University	Langhorne ...
+// 0	Caldwell University	Caldwell
+// 	California Baptist University	Riverside ...
+// 	California College of the Arts	San Francisco ...
+// 	California Institute of Integral Studies	San Francisco
+// California Institute of Technology	Pasadena
+// 	California Institute of the Arts	Valencia
+// California Lutheran University	Thousand Oaks
+// California Polytechnic State University, San Luis Obispo	San Luis Obispo
+// California State Polytechnic University, Pomona	Pomona
+// California State University Channel Islands	Camarillo
+// California State University Maritime Academy	Vallejo
+// 	California State University San Marcos	San Marcos ...
+// 	California State University, Bakersfield	Bakersfield
+// 	California State University, Chico	Chico
+// 	California State University, Dominguez Hills	Carson ...
+// 	California State University, East Bay	Hayward ...
+// 	California State University, Fresno	Fresno
+// 	California State University, Fullerton	Fullerton ...
+// 	California State University, Long Beach	Long Beach
+// 	California State University, Los Angeles	Los Angeles
+// 	California State University, Monterey Bay	Seaside
+// 	California State University, Northridge	Northridge
+// 	California State University, Sacramento	Sacramento
+// 	California State University, San Bernardino	San Bernardino ...
+// 	California State University, Stanislaus	Turlock ...
+// 	California University of Pennsylvania	California
+// 	California Western School of Law	San Diego
+// 	Calumet College of St.Joseph	Whiting
+// 	Calvary University	Kansas City
+// Calvin University	Grand Rapids
+// 	Cambridge College	Boston ...
+// Cameron University	Lawton ...
+// Campbell University	Buies Creek
+// 	Campbellsville University	Campbellsville
+// Canisius College	Buffalo
+// Capital University	Columbus
+// Capitol Technology University	Laurel
+// 	Cardinal Stritch University	Milwaukee
+// Carleton College	Northfield
+// 	Carlow University	Pittsburgh
+// Carnegie Mellon University	Pittsburgh ...
+// 	Carolina University	Winston Salem ...
+// Carroll College	Helena
+// Carroll University	Waukesha ...
+// 	Carson - Newman University	Jefferson City
+// 	Carthage College	Kenosha
+// Case Western Reserve University	Cleveland
+// 	Castleton University	Castleton
+// 	Catawba College	Salisbury
+// 	Cazenovia College	Cazenovia
+// 	Cedar Crest College	Allentown
+// Cedarville University	Cedarville
+// Centenary College of Louisiana	Shreveport
+// 	Centenary University	Hackettstown
+// 	Central Baptist College	Conway
+// 	Central Christian College of Kansas	McPherson
+// 	Central Christian College of the Bible	Moberly ...
+// Central College	Pella
+// Central Connecticut State University	New Britain
+// 	Central Methodist University	Fayette
+// Central Michigan University	Mount Pleasant
+// 	Central Penn College	Summerdale
+// 	Central State University	Wilberforce
+// Central Washington University	Ellensburg ...
+// 	Centralia College	Centralia
+// Centre College	Danville
+// Chadron State College	Chadron
+// 	Chamberlain University	Addison ...
+// Chaminade University of Honolulu	Honolulu
+// Champlain College	Burlington ...
+// Chapman University	Orange
+// 	Charles R.Drew University of Medicine and Science	Los Angeles
+// Charleston Southern University	Charleston
+// Chatham University	Pittsburgh
+// Chestnut Hill College	Philadelphia
+// 	Cheyney University of Pennsylvania	Cheyney
+// Chicago State University	Chicago
+// 	Chipola College	Marianna
+// 	Chowan University	Murfreesboro
+// Christian Brothers University	Memphis
+// Christopher Newport University	Newport News
+// 	City University of Seattle	Seattle ...
+// 	Claflin University	Orangeburg
+// Claremont Graduate University	Claremont ...
+// Claremont McKenna College	Claremont
+// Clarion University of Pennsylvania	Clarion
+// Clark Atlanta University	Atlanta
+// Clark University	Worcester
+// 	Clarke University	Dubuque
+// 	Clarks Summit University	Clarks Summit
+// 	Clarkson College	Omaha
+// Clarkson University	Potsdam ...
+// Clayton State University	Morrow
+// Clear Creek Baptist Bible College	Pineville
+// 4Cleary University	Howell ...
+// Clemson University	Clemson
+// 	Cleveland Institute of Art	Cleveland
+// 	Cleveland Institute of Music	Cleveland
+// Cleveland State University	Cleveland
+// 	Cleveland University - Kansas City	Overland Park
+// Coastal Carolina University	Conway ...	Coe College	Cedar Rapids
+// 	Coker University	Hartsville
+// Colby College	Waterville
+// 	Colby - Sawyer College	New London
+// Colgate University	Hamilton
+// 8College for Creative Studies	Detroit
+// 	College of Biblical Studies	Houston ...
+// 339College of Central Florida	Ocala
+// 2	College of Charleston	Charleston
+// 555College of Coastal Georgia	Brunswick
+// 	College of Mount Saint Vincent	The Bronx
+// 	College of Our Lady of the Elms	Chicopee
+// College of Saint Benedict / Saint John's University	St. Joseph ...
+// 8	College of Saint Mary	Omaha
+// 	College of Southern Nevada	Las Vegas
+// 1	College of Staten Island	Staten Island
+// 7	College of the Atlantic	Bar Harbor
+// 	College of the Holy Cross	Worcester
+// 0	College of the Ozarks	Point Lookout
+// 	College of William & Mary	Williamsburg
+// 	Colorado Christian University	Lakewood
+// 	Colorado College	Colorado Springs ...
+// 	Colorado Mesa University	Grand Junction
+// 	Colorado School of Mines	Golden
+// Colorado State University	Fort Collins
+// 	Colorado State University - Pueblo	Pueblo ...
+// 1	Colorado Technical University	Colorado Springs ...
+// 78	Columbia Basin College	Pasco
+// 0	Columbia College	Columbia
+// 5	Columbia College Chicago	Chicago
+// 68	Columbia College Hollywood	Tarzana
+// 02	Columbia College, South Carolina	Columbia
+// 69	Columbia International University	Columbia
+// Columbia University in the City of New York	New York City
+// 	Columbus College of Art and Design	Columbus
+// Columbus State University	Columbus
+// 	Concord University	Athens
+// Concordia College	Moorhead
+// 	Concordia College - New York	Bronxville
+// 	Concordia University Ann Arbor	Ann Arbor
+// 	Concordia University Chicago	River Forest
+// Concordia University Irvine	Irvine
+// Concordia University Texas	Austin
+// 3	Concordia University Wisconsin	Mequon
+// 53	Concordia University, Nebraska	Seward
+// 9	Concordia University, St.Paul	Saint Paul
+// 7	Connecticut College	New London
+// 87	Converse College	Spartanburg
+// 78	Conway School of Landscape Design	Northampton
+// 68	Coppin State University	Baltimore
+// 04	Corban University	Salem
+// 3	Cornell College	Mount Vernon
+// Cornell University	Ithaca
+// Cornerstone University	Grand Rapids
+// 	Cornish College of the Arts	Seattle
+// 	Cottey College	Nevada
+// 	Covenant College	Lookout Mountain
+// 	Cox College	Springfield
+// 	Cranbrook Academy of Art	Bloomfield Hills
+// Creighton University	Omaha
+// 	Criswell College	Dallas
+// 	Crowley's Ridge College	Paragould
+// Crown College	St.Bonifacius ...
+// Culver - Stockton College	Canton
+// Cumberland University	Lebanon
+// CUNY School of Law	Long Island City
+// Curry College	Milton
+// 	Curtis Institute of Music	Philadelphia
+// 5	Daemen College	Amherst
+// 	Dakota State University	Madison ...
+// 2	Dakota Wesleyan University	Mitchell
+// 	Dallas Baptist University	Dallas
+// 8	Dallas Christian College	Dallas
+// 4	Dalton State College	Dalton
+// Dartmouth College	Hanover
+// 	Davenport University	Grand Rapids ...
+// Davidson College	Davidson
+// 	Davis and Elkins College	Elkins
+// 	Davis College	Johnson City ...
+// 	Daytona State College	Daytona Beach
+// 	Dean College	Franklin
+// 	Defiance College	Defiance
+// Delaware State University	Dover
+// 	Delaware Valley University	Doylestown
+// Delta State University	Cleveland
+// Denison University	Granville
+// 41	Denver College of Nursing	Denver
+// 8	DePaul University	Chicago
+// DePauw University	Greencastle
+// Des Moines University	Des Moines
+// DeSales University	Center Valley
+// DeVry University	Chicago ...
+// 	Dharma Realm Buddhist University	Ukiah
+// Dickinson College	Carlisle
+// 	Dickinson State University	Dickinson
+// 	Dillard University	New Orleans
+// 7	Doane University	Crete
+// 1	Dominican College	Orangeburg
+// 2	Dominican School of Philosophy & Theology	Berkeley
+// 	Dominican University	River Forest
+// 	Dominican University of California	San Rafael
+// 5	Donnelly College	Kansas City
+// 3	Dordt University	Sioux Center
+// 	Drake University	Des Moines
+// 	Drew University	Madison
+// Drexel University	Philadelphia
+// 	Drury University	Springfield ...
+// Duke University	Durham
+// Dunwoody College of Technology	Minneapolis
+// Duquesne University	Pittsburgh
+// 	D'Youville College	Buffalo
+// Earlham College	Richmond
+// East Carolina University	Greenville
+// 	East Central University	Ada
+// 	East Georgia State College	Swainsboro ...
+// East Stroudsburg University	East Stroudsburg
+// East Tennessee State University	Johnson City ...
+// 	East Texas Baptist University	Marshall
+// Eastern Connecticut State University	Willimantic
+// Eastern Illinois University	Charleston
+// Eastern Kentucky University	Richmond
+// Eastern Mennonite University	Harrisonburg ...
+// Eastern Michigan University	Ypsilanti ...
+// 	Eastern Nazarene College	Quincy
+// Eastern New Mexico University	Portales
+// Eastern Oregon University	La Grande
+// Eastern University	St.Davids
+// Eastern Virginia Medical School	Norfolk
+// Eastern Washington University	Cheney
+// 	East - West University	Chicago
+// 	Ecclesia College	Springdale
+// Eckerd College	Saint Petersburg ...
+// ECPI University	Virginia Beach
+// 	Edgewood College	Madison
+// Edinboro University of Pennsylvania	Edinboro
+// 	Edward Waters University	Jacksonville
+// 	Elizabeth City State University	Elizabeth City
+// Elizabethtown College	Elizabethtown
+// Elmhurst University	Elmhurst
+// 	Elmira College	Elmira
+// Elon University	Elon
+// 	Embry - Riddle Aeronautical University	Daytona Beach ...
+// 	Emerson College	Boston
+// 3	Emmanuel College	Boston
+// 8	Emmanuel College, Georgia	Franklin Springs
+// 4	Emmaus Bible College	Dubuque
+// 7	Emory & Henry College	Emory ...
+// Emory University	Atlanta
+// 	Emporia State University	Emporia
+// 	Endicott College	Beverly
+// 3	Erskine College	Due West
+// Eureka College	Eureka ...
+// Evangel University	Springfield
+// Everglades University	Boca Raton ...
+// 	Fairfield University	Fairfield
+// 	Fairleigh Dickinson University	Teaneck ...
+// 	Fairmont State University	Fairmont
+// 	Faith Baptist Bible College and Theological Seminary	Ankeny
+// Farmingdale State College	Farmingdale
+// Fashion Institute of Technology	New York City
+// 	Faulkner University	Montgomery
+// Fayetteville State University	Fayetteville
+// 	Felician University	Lodi ...
+// Ferris State University	Big Rapids
+// 	Ferrum College	Ferrum
+// 	Fielding Graduate University	Santa Barbara
+// 	Finlandia University	Hancock
+// 	Fisher College	Boston ...
+// Fisk University	Nashville
+// 	Fitchburg State University	Fitchburg
+// 	Five Towns College	Dix Hills
+// Flagler College	St.Augustine ...
+// Florida Agricultural and Mechanical University	Tallahassee
+// Florida Atlantic University	Boca Raton ...
+// 3	Florida College	Temple Terrace
+// 6	Florida Gateway College	Lake City
+// 	Florida Gulf Coast University	Fort Myers
+// 	Florida Institute of Technology	Melbourne
+// Florida International University	Miami
+// 	Florida Memorial University	Miami Gardens
+// 	Florida National University	Hialeah
+// Florida Southern College	Lakeland
+// 	Florida SouthWestern State College	Fort Myers
+// Florida State College at Jacksonville	Jacksonville
+// 	Florida State University	Tallahassee ...
+// 5	Fontbonne University	St.Louis
+// Fordham University	The Bronx ...
+// 	Fort Hays State University	Hays
+// Fort Lewis College	Durango
+// 3	Fort Valley State University	Fort Valley
+// 	Framingham State University	Framingham
+// 	Francis Marion University	Florence
+// 7	Franciscan Missionaries of Our Lady University	Baton Rouge
+// 	Franciscan University of Steubenville	Steubenville
+// 	Franklin and Marshall College	Lancaster
+// 8	Franklin College	Franklin
+// 1	Franklin Pierce University	Rindge ...
+// 	Franklin University	Columbus ...
+// 	Franklin W.Olin College of Engineering	Needham
+// 2	Freed - Hardeman University	Henderson
+// 	Fresno Pacific University	Fresno ...
+// 6	Friends University	Wichita ...
+// 	Frostburg State University	Frostburg ...
+// 	Furman University	Greenville
+// 	Gallaudet University	Washington
+// 	Gannon University	Erie
+// 1	Gardner - Webb University	Boiling Springs ...
+// Geisinger Commonwealth School of Medicine	Scranton
+// 	Geneva College	Beaver Falls
+// 	George Fox University	Newberg
+// George Mason University	Fairfax
+// George Washington University	Washington ...
+// 	Georgetown College	Georgetown
+// Georgetown University	Washington
+// 	Georgia College and State University	Milledgeville ...
+// 0	Georgia Gwinnett College	Lawrenceville
+// Georgia Institute of Technology	Atlanta
+// 	Georgia Southern University	Statesboro ...
+// 6	Georgia Southwestern State University	Americus
+// Georgia State University	Atlanta
+// Georgian Court University	Lakewood
+// Gettysburg College	Gettysburg
+// 	Glenville State College	Glenville
+// 	Goddard College	Plainfield ...
+// 	God's Bible School and College	Cincinnati
+// Golden Gate University	San Francisco ...
+// 	Goldey - Beacom College	Wilmington
+// 	Goldfarb School of Nursing at Barnes - Jewish College	St.Louis
+// Gonzaga University	Spokane
+// 	Good Samaritan College of Nursing and Health Science	Cincinnati
+// 	Goodwin University	East Hartford
+// Gordon College	Wenham ...
+// 	Gordon State College	Barnesville
+// Goshen College	Goshen
+// Goucher College	Towson
+// Governors State University	University Park
+// 	Grace Christian University	Wyoming
+// 	Grace College	Winona Lake ...
+// 	Graceland University	Lamoni
+// Grambling State University	Grambling
+// Grand Canyon University	Phoenix
+// Grand Valley State University	Allendale ...
+// Grand View University	Des Moines
+// Granite State College	Concord
+// Gratz College	Melrose Park
+// 	Great Basin College	Elko ...
+// 	Great Lakes Christian College	Lansing
+// 	Greensboro College	Greensboro
+// 	Greenville University	Greenville
+// Grinnell College	Grinnell
+// Grove City College	Grove City
+// 	Guilford College	Greensboro
+// Gulf Coast State College	Panama City
+// 	Gustavus Adolphus College	St.Peter
+// 	Gwynedd Mercy University	Gwynedd Valley
+// 	Hamilton College	Clinton
+// 	Hamline University	Saint Paul
+// 	Hampden - Sydney College	Hampden - Sydney
+// 	Hampshire College	Amherst
+// 	Hampton University	Hampton
+// 2	Hannibal - LaGrange University	Hannibal
+// 	Hanover College	Hanover
+// 	Harding University	Searcy ...
+// 2	Hardin - Simmons University	Abilene
+// 4	Harrisburg University of Science and Technology	Harrisburg
+// 7	Harris - Stowe State University	St.Louis
+// 	Hartwick College	Oneonta
+// arvard University	Cambridge
+// 	Harvey Mudd College	Claremont ...
+// 6	Hastings College	Hastings
+// 	Haverford College	Haverford
+// Hawaii Pacific University	Honolulu
+// 	Hebrew College	Newton Centre
+// 	Heidelberg University	Tiffin
+// 	Helene Fuld College of Nursing	New York City
+// 1	Henderson State University	Arkadelphia
+// 	Hendrix College	Conway
+// 7	Heritage Christian University	Florence
+// 9	Heritage University	Toppenish
+// 	Herzing University	Madison
+// 	High Point University	High Point
+// 3	Hilbert College	Hamburg
+// 	Hillsdale College	Hillsdale
+// 3	Hiram College	Hiram
+// 	Hobart and William Smith Colleges	Geneva
+// 	Hodges University	Naples
+// Hofstra University	Hempstead
+// Hollins University	Roanoke
+// 	Holy Apostles College and Seminary	Cromwell
+// 	Holy Cross College	Notre Dame
+// 	Holy Family University	Philadelphia
+// 	Holy Names University	Oakland
+// Hood College	Frederick
+// Hope College	Holland
+// 	Hope International University	Fullerton
+// 	Houghton College	Houghton ...
+// Houston Baptist University	Houston
+// 	Howard Payne University	Brownwood
+// Howard University	Washington
+// Hult International Business School	Cambridge ...
+// Humboldt State University	Arcata
+// Humphreys University	Stockton
+// Hunter College, CUNY	New York City
+// Huntingdon College	Montgomery
+// 	Huntington University	Huntington ...
+// Husson University	Bangor
+// 	Huston - Tillotson University	Austin
+// Icahn School of Medicine at Mount Sinai	New York City
+// Idaho State University	Pocatello ...
+// 	Illinois College	Jacksonville
+// 	Illinois College of Optometry	Chicago
+// Illinois Institute of Technology	Chicago
+// Illinois State University	Normal
+// Illinois Wesleyan University	Bloomington
+// 	Immaculata University	Immaculata ...
+// 	Indian River State College	Fort Pierce ...
+// 	Indiana Institute of Technology	Fort Wayne ...
+// Indiana State University	Terre Haute
+// 	Indiana University - Purdue University Indianapolis	Indianapolis
+// Indiana University Bloomington	Bloomington
+// 0	Indiana University East	Richmond
+// 9	Indiana University Fort Wayne	Fort Wayne
+// 9	Indiana University Kokomo	Kokomo
+// 0	Indiana University Northwest	Gary
+// 	Indiana University of Pennsylvania	Indiana
+// 	Indiana University South Bend	South Bend ...
+// 	Indiana University Southeast	New Albany
+// 	Indiana Wesleyan University	Marion
+// 	Iona College	New Rochelle
+// Iowa State University	Ames
+// 2	Iowa Wesleyan University	Mount Pleasant
+// Irell and Manella Graduate School of Biological Sciences	Duarte
+// Ithaca College	Ithaca
+// Jackson State University	Jackson
+// 	Jacksonville State University	Jacksonville
+// 	Jacksonville University	Jacksonville
+// 	James Madison University	Harrisonburg
+// 1	Jamestown Business College	Jamestown
+// 3	Jarvis Christian College	Hawkins
+// 	John Brown University	Siloam Springs
+// 	John Carroll University	University Heights
+// 9	John F.Kennedy University	Pleasant Hill ...
+// 1	John Jay College of Criminal Justice	New York City
+// 6	John Paul the Great Catholic University	Escondido
+// Johns Hopkins University	Baltimore ...
+// Johnson and Wales University	Providence ...
+// 	Johnson C.Smith University	Charlotte
+// 	Johnson University	Knoxville ...
+// 	Judson College	Marion
+// 	Judson University	Elgin ...
+// Juniata College	Huntingdon
+// 8	Kalamazoo College	Kalamazoo
+// 60	Kansas City Art Institute	Kansas City
+// 62	Kansas City University	Kansas City
+// 0	Kansas State University	Manhattan ...
+// 49	Kansas Wesleyan University	Salina
+// 6	Kean University	Union ...
+// 8	Keck Graduate Institute	Claremont
+// 2	Keene State College	Keene
+// 2	Keiser University	Fort Lauderdale
+// 1	Kennesaw State University	Kennesaw ...
+// 1	Kent State University	Kent ...
+// 23	Kentucky Christian University	Grayson
+// 6	Kentucky State University	Frankfort
+// 54	Kentucky Wesleyan College	Owensboro
+// 82	Kenyon College	Gambier
+// 643	Kettering College	Kettering
+// 91	Kettering University	Flint
+// 312	Keuka College	Keuka Park
+// 441	Keystone College	La Plume
+// 030	King University	Bristol
+// 70	King's College	Wilkes-Barre
+// 03	Knox College	Galesburg ...
+// 58	Kutztown University of Pennsylvania	Kutztown
+// 649	Kuyper College	Grand Rapids
+// 408	La Roche University	Pittsburgh
+// 88	La Salle University	Philadelphia
+// 091	La Sierra University	Riverside
 // 1712	Labouré College	Milton
 // 422	Lafayette College	Easton
 // 1409	LaGrange College	LaGrange
@@ -1766,4 +1766,3 @@
 // 1660	York College, City University of New York	Jamaica
 // 1551	Young Harris College	Young Harris
 // 480	Youngstown State University	Youngstown
-// ]}

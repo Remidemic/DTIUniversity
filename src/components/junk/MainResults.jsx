@@ -1,27 +1,8 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-function MainResults() {
-    const [data, setData] = useState({})
-    const [school, setSchool] = useState('')
-  
-    const url = `https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${school}&api_key=gj8gTZioRMSkwnGkcBPLtvtZyJV0ShIkGT8LD1Rp`
-  
-    const programs =[]
-  
-    // const program = url.map(response.data.results[0].latest.programs);
-  
-    
-    const searchSchool = (event) => {
-      if (event.key === 'Enter') {
-  
-        axios.get(url).then((response) => {
-          setData(response.data)
-          
-          console.log(response.data.results[0].latest.programs)
-        })
-      }
-    }
+
+function MainResults(props) {
+
     return (
         <div className="container">
             <div className="top">
@@ -71,5 +52,3 @@ function MainResults() {
 }
 
 export default MainResults
-
-// latest.cost.avg_net_price.consumer.median_by_pred_degree = Median average net price amongst institutions with the same predominant degree category
