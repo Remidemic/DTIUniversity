@@ -19,7 +19,7 @@ function App() {
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
         setData(response.data)
-        console.log(response.data.results[0].latest)
+        // console.log(response.data.results[0].latest)
       })
     }
   }
@@ -37,7 +37,7 @@ function App() {
       </div>
 
       <ResultsList data={data}/>
-
+      <div></div>
       <BSSchoolFacts data={data} />
 
       <BSMajorList data={data} />

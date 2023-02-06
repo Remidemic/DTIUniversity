@@ -10,9 +10,6 @@ function BSMajorList({data}) {
                         <span className='fw-light'></span> programs listed at {data.results[0].school.name} </p>
                         <p>Click a major for details</p>
 
-
-
-
                     {data.results[0].latest.programs.cip_4_digit.map((major, index) => {
                         const key = index;
                         const hasEarnings = () => {
@@ -35,16 +32,16 @@ function BSMajorList({data}) {
                                 return null
                             }
                         }
+                        // console.log(key.toString())
                         return (
                             <div 
                                 key={key}
                                 >
                                 <Accordion>
-                                    <Accordion.Item eventKey= {`${key}`}>
+                                    <Accordion.Item eventKey= {`${Math.random()}`}>
                                         <Accordion.Header> {key}. {major.title} {hasEarnings()} {certif()}  </Accordion.Header>
                                         <Accordion.Body>
                                             <div>
-                                                {/* <p>Program Major {key}: {major.title}</p> */}
                                                 <p>Certificate: {major.credential.title}</p>
                                                 <p>overall median earnings:</p>
                                                 <p>1st yr: ${major.earnings.highest["1_yr"].overall_median_earnings}</p>
