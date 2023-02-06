@@ -1,12 +1,10 @@
 import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
-// import MajorsList from './components/Majors/MajorsList';
-// import SchoolFacts from './components/SchoolFacts';
-// import MajorFacts from './components/Majors/MajorFacts';
 import BSNavbar from './components/Header/BSNavbar';
 import BSSchoolFacts from './components/Majors/BSSchoolFacts';
 import BSMajorList from './components/Majors/BSMajorList'
+import ResultsList from './components/Search/ResultsList';
 function App() {
 
   const MY_KEY = process.env.REACT_APP_API_KEY
@@ -14,8 +12,6 @@ function App() {
   const [school, setSchool] = useState('')
   // const [major, setMajor] = useState({})
   // const [key, setKey] = useState({})
-
-  // add latest year hardcoded into query string. check docs to see how (2019? 2020?)
 
   const url = `https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${school}&api_key=${MY_KEY}`
 
@@ -28,7 +24,6 @@ function App() {
     }
   }
 
-
   return (
     <div className="App">
       <BSNavbar />
@@ -38,30 +33,29 @@ function App() {
           onChange={event => setSchool(event.target.value)}
           onKeyDown={searchSchool}
           placeholder='Enter School'
-          type="text"/>
+          type="text" />
       </div>
+
+      <ResultsList data={data}/>
 
       <BSSchoolFacts data={data} />
 
-      <BSMajorList data={data}/>
+      <BSMajorList data={data} />
     </div>
   );
 }
 
 export default App;
 
+// <MajorFacts
+//   data={data}
+//   majorPick={major}
+//   keyPick={key} />
 
-
-      // <MajorFacts
-      //   data={data}
-      //   majorPick={major}
-      //   keyPick={key} />
-
-      // <MajorsList
-      //   data={data}
-      //   onMajorHandler={setMajorHandler}
-      //   onKeyHandler={setKeyHandler} />
-
+// <MajorsList
+//   data={data}
+//   onMajorHandler={setMajorHandler}
+//   onKeyHandler={setKeyHandler} />
 
 // const setMajorHandler = ({ major }) => {
 //   setMajor({ major });
