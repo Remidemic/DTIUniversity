@@ -6,17 +6,10 @@ import classes from './SchoolFacts.module.css'
 
 function SchoolFacts({ data }) {
 
-
     if (data.results !== null) {
-
-
-
         return (
-
             <div className={`${classes.box}`}>
                 <h4>- School Facts</h4>
-
-
                 <li className={`${classes.title}`}>
                     Institution name:
                     {data.results ?
@@ -83,7 +76,6 @@ function SchoolFacts({ data }) {
                         : null
                     }
                 </li>
-
                 <li className={`${classes.title}`}>
                     university portfolio balance of student debt in direct loans
                     {data.results ?
@@ -93,10 +85,6 @@ function SchoolFacts({ data }) {
                         : null
                     }
                 </li>
-
-
-
-
             </div>
         )
     }

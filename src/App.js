@@ -1,19 +1,19 @@
 import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
-import MajorsList from './components/Majors/MajorsList';
-import SchoolFacts from './components/SchoolFacts';
-import MajorFacts from './components/Majors/MajorFacts';
-import Navbar from './components/Navbar';
-// import Search from './components/Search/Search';
-
+// import MajorsList from './components/Majors/MajorsList';
+// import SchoolFacts from './components/SchoolFacts';
+// import MajorFacts from './components/Majors/MajorFacts';
+import BSNavbar from './components/Header/BSNavbar';
+import BSSchoolFacts from './components/Majors/BSSchoolFacts';
+import BSMajorList from './components/Majors/BSMajorList'
 function App() {
 
   const MY_KEY = process.env.REACT_APP_API_KEY
   const [data, setData] = useState({})
   const [school, setSchool] = useState('')
-  const [major, setMajor] = useState({})
-  const [key, setKey] = useState({})
+  // const [major, setMajor] = useState({})
+  // const [key, setKey] = useState({})
 
   // add latest year hardcoded into query string. check docs to see how (2019? 2020?)
 
@@ -27,39 +27,45 @@ function App() {
       })
     }
   }
-  const setMajorHandler = ({major}) => {
-    setMajor({ major });
-  }
-  const setKeyHandler = ({key}) => {
-    setKey(key);
-  }
+
 
   return (
     <div className="App">
-      <Navbar />
+      <BSNavbar />
       <div className="search">
         <input
           value={school}
           onChange={event => setSchool(event.target.value)}
           onKeyDown={searchSchool}
           placeholder='Enter School'
-          type="text" />
+          type="text"/>
       </div>
 
-      {/* <Search onDataHandler={setDataHandler} /> */}
-      <SchoolFacts data={data} />
-      <MajorFacts
-        data={data}
-        majorPick={major}
-        keyPick={key} />
+      <BSSchoolFacts data={data} />
 
-      <MajorsList
-        data={data}
-        onMajorHandler={setMajorHandler}
-        onKeyHandler={setKeyHandler} />
-
+      <BSMajorList data={data}/>
     </div>
   );
 }
 
 export default App;
+
+
+
+      // <MajorFacts
+      //   data={data}
+      //   majorPick={major}
+      //   keyPick={key} />
+
+      // <MajorsList
+      //   data={data}
+      //   onMajorHandler={setMajorHandler}
+      //   onKeyHandler={setKeyHandler} />
+
+
+// const setMajorHandler = ({ major }) => {
+//   setMajor({ major });
+// }
+// const setKeyHandler = ({ key }) => {
+//   setKey(key);
+// }

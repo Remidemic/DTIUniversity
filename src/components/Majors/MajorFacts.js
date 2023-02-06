@@ -11,7 +11,7 @@ function MajorFacts({ majorPick, keyPick }) {
             <div className={classes.frame}>
                 <p>Program Major {keyPick}: {majorPick.major.title}</p>
                 <p>Certificate: {majorPick.major.credential.title}</p>
-                <p>overall median earnings:</p>
+                <p>Overall median earnings:</p>
                 <p>1st yr: ${majorPick.major.earnings.highest["1_yr"].overall_median_earnings}</p>
                 <p>2nd yr: ${majorPick.major.earnings.highest["2_yr"].overall_median_earnings}</p>
                 <p>3rd yr: ${majorPick.major.earnings.highest["3_yr"].overall_median_earnings}</p>
