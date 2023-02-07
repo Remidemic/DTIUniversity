@@ -1,4 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
+import ListLegend from './ListLegend';
 
 function BSMajorList({data}) {
     return (
@@ -6,10 +7,15 @@ function BSMajorList({data}) {
         <>
             {data.results ?
                 <div>
-                        <p className='fw-bolder'> {data.results[0].latest.programs.cip_4_digit.length}
-                        <span className='fw-light'></span> programs listed at {data.results[0].school.name} </p>
-                        <p>Click a major for details</p>
+                    <br />
+                        <h4 className='fw-bolder'> - {data.results[0].latest.programs.cip_4_digit.length}
+                        <span className='fw-light'></span> programs listed at {data.results[0].school.name}                     <br/>
+                        </h4>  <p className='fw-bolder'>- Click program for details </p>
+                    - <ListLegend />
+                    <br/>
+                    <br/>
 
+                        
                     {data.results[0].latest.programs.cip_4_digit.map((major, index) => {
                         const key = index;
                         const hasEarnings = () => {

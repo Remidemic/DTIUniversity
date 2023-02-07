@@ -5,10 +5,11 @@ function BSSchoolFacts({ data }) {
 
     if (data.results !== null) {
         return (
-
+            
             <ListGroup as="ol">
                 
-                <div className="fw-bold">school facts: </div>
+                <div className="fw-bold">School Facts: </div>
+                <br/>
                 <ListGroup.Item
                     as="li"
                     className="d-flex justify-content-between align-items-start"

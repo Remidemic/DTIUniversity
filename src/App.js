@@ -19,7 +19,11 @@ function App() {
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
         setData(response.data)
+        console.log("success")
         // console.log(response.data.results[0].latest)
+        if(response.data.results[0].latest === undefined) {
+          console.log ('error')
+        }
       })
     }
   }
@@ -36,10 +40,11 @@ function App() {
           type="text" />
       </div>
 
-      <ResultsList data={data}/>
-      <div></div>
+     <ResultsList data={data}/>
+      <br/>
+      
       <BSSchoolFacts data={data} />
-
+      <br/>
       <BSMajorList data={data} />
     </div>
   );
