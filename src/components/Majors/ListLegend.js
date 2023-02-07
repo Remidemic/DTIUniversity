@@ -11,7 +11,7 @@ function ListLegend() {
         <>
 
             <Button variant="secondary" onClick={handleShow}>
-                Legend
+                Click for Legend
             </Button>
 
             <Modal show={show} onHide={handleClose}>
