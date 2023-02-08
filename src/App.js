@@ -20,17 +20,23 @@ function App() {
       axios.get(url).then((response) => {
         setData(response.data)
         console.log("success")
-        // console.log(response.data.results[0].latest)
-        if(response.data.results[0].latest === undefined) {
-          console.log ('error')
-        }
+        console.log(response.data.results[0].latest)
+
       })
     }
   }
 
+  // const setDataHandler = ({ data }) => {
+//   setData({ data });
+// }
+
+
+
+
   return (
     <div className="App">
       <BSNavbar />
+      
       <div className="search">
         <input
           value={school}

@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Search = ({onDataHandler}) => {
+const Search = (props) => {
 
     const MY_KEY = process.env.REACT_APP_API_KEY
     // const [data, setData] = useState({})
 
+    const [data, setData] = useState({})
     const [school, setSchool] = useState('')
 
 
@@ -18,7 +19,7 @@ const Search = ({onDataHandler}) => {
         if (event.key === 'Enter') {
             axios.get(url).then((response) => {
                 // setData(response.data)
-                onDataHandler(response.data.results[0].latest)
+                props.onDataHandler(response.data)
                 console.log(response.data.results[0].latest)
             })
         }
