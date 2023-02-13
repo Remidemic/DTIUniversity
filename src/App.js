@@ -24,14 +24,11 @@ function App() {
         if (response.data.metadata.total > 0) {
           setData(response.data)
           setResults('');
-
-          // console.log("success")
           console.log(response.data.results[0].latest)
           console.log(response.data.metadata.total)
         }
         else {
-          console.log('no results');
-          setResults('no results - try another search');
+          setResults(`no results for " ${school} " try another search`);
           setData({});
           return;
         }
@@ -60,9 +57,9 @@ function App() {
           type="text" />
       </div>
 
-      <p>{results}</p>
       <ResultsList data={data} />
-      <br />
+      <p>{results}</p>
+      {/* <br /> */}
 
       <BSSchoolFacts data={data} />
       <br />
