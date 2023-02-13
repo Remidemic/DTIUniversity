@@ -68,10 +68,9 @@ function BSSchoolFacts({ data }) {
                     className="d-flex justify-content-between align-items-start"
                 >
                     <div className="ms-2 me-auto">
-                        <div className="fw-bold">Comsumer rate of completion as a percent:</div>
+                        <div className="fw-bold">Comsumer rate of completion :</div>
                         {data.results ?
-                            <h4 className="fw-light">{data.results[0].latest.completion.consumer_rate.toFixed(2)}</h4>
-
+                            <h4 className="fw-light">{Math.round(data.results[0].latest.completion.consumer_rate * 100)}%</h4>
                             : null
                         }                </div>
                     <Badge bg="primary" pill>

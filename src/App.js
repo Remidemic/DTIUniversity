@@ -11,13 +11,13 @@ function App() {
   const [data, setData] = useState({})
   const [school, setSchool] = useState('')
   const [results, setResults] = useState('')
+
   // const [major, setMajor] = useState({})
   // const [key, setKey] = useState({})
 
   const url = `https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${school}&api_key=${MY_KEY}`
 
   const searchSchool = (event) => {
-
 
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
@@ -26,13 +26,11 @@ function App() {
           setResults('');
           console.log(response.data.results[0].latest)
           console.log(response.data.metadata.total)
-        }
-        else {
+        } else {
           setResults(`no results for " ${school} " try another search`);
           setData({});
           return;
         }
-
       })
     }
   }
@@ -61,7 +59,7 @@ function App() {
       <p>{results}</p>
       {/* <br /> */}
 
-      <BSSchoolFacts data={data} />
+      { <BSSchoolFacts data={data} />}
       <br />
       <BSMajorList data={data} />
     </div>
