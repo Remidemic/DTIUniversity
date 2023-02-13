@@ -10,25 +10,39 @@ function App() {
   const MY_KEY = process.env.REACT_APP_API_KEY
   const [data, setData] = useState({})
   const [school, setSchool] = useState('')
+  const [results, setResults] = useState('')
   // const [major, setMajor] = useState({})
   // const [key, setKey] = useState({})
 
   const url = `https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${school}&api_key=${MY_KEY}`
 
   const searchSchool = (event) => {
+
+
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
-        setData(response.data)
-        console.log("success")
-        console.log(response.data.results[0].latest)
+        if (response.data.metadata.total > 0) {
+          setData(response.data)
+          setResults('');
+
+          // console.log("success")
+          console.log(response.data.results[0].latest)
+          console.log(response.data.metadata.total)
+        }
+        else {
+          console.log('no results');
+          setResults('no results - try another search');
+          setData({});
+          return;
+        }
 
       })
     }
   }
 
   // const setDataHandler = ({ data }) => {
-//   setData({ data });
-// }
+  //   setData({ data });
+  // }
 
 
 
@@ -36,7 +50,7 @@ function App() {
   return (
     <div className="App">
       <BSNavbar />
-      
+
       <div className="search">
         <input
           value={school}
@@ -46,11 +60,12 @@ function App() {
           type="text" />
       </div>
 
-     <ResultsList data={data}/>
-      <br/>
-      
+      <p>{results}</p>
+      <ResultsList data={data} />
+      <br />
+
       <BSSchoolFacts data={data} />
-      <br/>
+      <br />
       <BSMajorList data={data} />
     </div>
   );
