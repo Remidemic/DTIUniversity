@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 // eslint-disable-next-line
 import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
+// import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // eslint-disable-next-line
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -14,9 +14,9 @@ function NavScrollExample() {
         <Navbar bg="light" expand="sm">
             <Container fluid>
                 <Navbar.Brand href="#" className=''>DTIU</Navbar.Brand>
+                <p>calculator</p>
                 <Example />
                 {/* <Navbar.Toggle aria-controls="navbarScroll" />
-                
                 <Navbar.Collapse id="navbarScroll">
                     
                     <Nav
