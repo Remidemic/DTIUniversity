@@ -1,13 +1,14 @@
 import './App.css';
 import React, { useState } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+// import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import BSNavbar from './components/Header/BSNavbar';
 import BSSchoolFacts from './components/Majors/BSSchoolFacts';
 import BSMajorList from './components/Majors/BSMajorList'
 import ResultsList from './components/Search/ResultsList';
 import Search from './components/Search/Search';
-import Calculator from './routes/Calculator';
-import ErrorPage from './routes/ErrorPage';
+// import Calculator from './routes/Calculator';
+// import ErrorPage from './routes/ErrorPage';
+
 function App() {
 
   const [results_, setResults_] = useState('')
@@ -19,24 +20,24 @@ function App() {
     setResults_(results_)
   }
 
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      // element: <RootLayout />,
-      errorElement: <ErrorPage />,
-      children: [
-        // { path: '/', element: <Home /> },
-        { path: '/Calculator', element: <Calculator /> }
-        // { path: '/products/:productId', element: <ProductDetail /> }
-      ],
-    },
-  ]);
+  // const router = createBrowserRouter([
+  //   {
+  //     path: '/',
+  //     // element: <RootLayout />,
+  //     errorElement: <ErrorPage />,
+  //     children: [
+  //       // { path: '/', element: <Home /> },
+  //       { path: '/Calculator', element: <Calculator /> }
+  //       // { path: '/products/:productId', element: <ProductDetail /> }
+  //     ],
+  //   },
+  // ]);
 
 
   return (
     <div className="App">
       <BSNavbar />
-      <RouterProvider router={router} />;
+      {/* <RouterProvider router={router} /> */}
       <Search
         onSetData_={setData_Handler}
         onSetResults_={setResults_Handler}

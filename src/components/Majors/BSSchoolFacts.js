@@ -17,9 +17,13 @@ function BSSchoolFacts({ data }) {
                     <div className="ms-2 me-auto" bg="light">
                         <div className="fw-bold">Institution name:</div>
                         {data.results ?
+
+                            // <a href={data.results[0].school.school_url} target="_blank">
                             <h4 className="fw-light">
                                 {data.results[0].school.name}
                             </h4>
+                            // </a>
+
                             : null
                         }
                     </div>

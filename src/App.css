@@ -20,4 +20,5 @@ input {
 .search{
 display: grid;
 justify-content: center;
+flex-direction: row;
 }

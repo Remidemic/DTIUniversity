@@ -1,6 +1,7 @@
-import './../../App.css';
+import './search.css';
 import React, { useState } from 'react';
 import axios from 'axios';
+
 
 function Search(props) {
 
@@ -8,8 +9,9 @@ function Search(props) {
     const [school, setSchool] = useState('')
     const url = `https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${school}&api_key=${MY_KEY}`
 
-    const searchSchool = (event) => {
-        if (event.key === 'Enter') {
+    const searchSchool = async (event) => {
+        event.preventDefault();
+        try {
             axios.get(url).then((response) => {
                 if (response.data.metadata.total > 0) {
                     props.onSetResults_('');
@@ -22,25 +24,26 @@ function Search(props) {
                     return;
                 }
             })
+        } catch (error) {
+            console.error(error);
         }
-    }
+    } 
 
     const setSchoolChangeHandler = event => {
         setSchool(event.target.value)
     }
-
+ 
     return (
-        <div className="App">
-            <div className="search">
+            <form className="search" onSubmit={searchSchool}>
                 <input
                     placeholder='Enter School'
                     type="text"
                     onChange={setSchoolChangeHandler}
-                    onKeyDown={searchSchool}
                 />
-            </div>
-        </div>
+                <button type='submit' className="button"> Search </button>
+            </form>
     );
 }
 
 export default Search;
+

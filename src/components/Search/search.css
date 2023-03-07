@@ -1,0 +1,42 @@
+input {
+    padding: .7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.1);
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.search{
+display: flex;
+justify-content: center;
+flex-direction: row;
+
+}
+
+.button{
+    margin-left: 5px;
+    padding: .7rem .7rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.1);
+    color: gray;
+}
+/* .button:hover{
+    background-color: red;
+} */
+
+/* .button:active{
+    background-color: rgb(104, 104, 104);
+    color: black;
+} */
+.button:hover{
+    background-color: rgb(120, 120, 120);
+    color: white; 
+}
