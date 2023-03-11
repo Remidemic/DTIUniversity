@@ -1,10 +1,8 @@
-
-import MainNavigation from "./MainNavigation";
-
+import BSNavbar from './../components/Nav/BSNavbar'
 
 function ErrorPage() {
     return <>
-    <MainNavigation/>
+    <BSNavbar/>
     <main>
         <h1>An error ocurred!</h1>
         <p>could not find this page!</p>

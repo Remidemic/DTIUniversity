@@ -6,7 +6,7 @@ function About() {
         <>
 
             <div className={classes.box}>
-                <p>     The average student loan debt, currently $37,574, did not grow as much in value in 2021 as it has in previous years. Private student loan debt grew at a much faster rate than federal debt.
+                <p> The average student loan debt, currently $37,574, did not grow as much in value in 2021 as it has in previous years. Private student loan debt grew at a much faster rate than federal debt.
 
                     The average federal student loan debt is $37,574 per borrower.
                     Private student loan debt averages $54,921 per borrower.

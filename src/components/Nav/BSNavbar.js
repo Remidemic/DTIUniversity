@@ -1,9 +1,9 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Example from './Example';
 import { Link } from 'react-router-dom';
@@ -32,8 +32,11 @@ function OffcanvasExample() {
                                     <Example />
                                     <Link to='/DTIUniversity/'>Home</Link>
                                     <Link to='/DTIUniversity/about'> About </Link>
+                                    <Link to='/DTIUniversity/COLD'> C.O.L.D. </Link>
                                     {/* <Nav.Link href="#action2">Link</Nav.Link> */}
-                                    <NavDropdown
+                                   
+                                   {/* NAV DROPDOWN */}
+                                    {/* <NavDropdown
                                         title="Dropdown"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
@@ -44,9 +47,11 @@ function OffcanvasExample() {
                                         <NavDropdown.Item href="#action5">
                                             Something else here
                                         </NavDropdown.Item>
-                                    </NavDropdown>
+                                    </NavDropdown> */}
                                 </Nav>
-                                <Form className="d-flex">
+
+                                {/* SEARCH FORM */}
+                                {/* <Form className="d-flex">
                                     <Form.Control
                                         type="search"
                                         placeholder="Search"
@@ -54,7 +59,7 @@ function OffcanvasExample() {
                                         aria-label="Search"
                                     />
                                     <Button variant="outline-success">Search</Button>
-                                </Form>
+                                </Form> */}
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                     </Container>
