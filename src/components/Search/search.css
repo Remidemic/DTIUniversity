@@ -1,7 +1,7 @@
 input {
-    padding: .7rem 1.5rem;
-    font-size: 1.2rem;
-    border-radius: 25px;
+    padding: .1rem .5rem;
+    font-size: 1rem;
+    border-radius: 15px;
     border: 1px solid black;
     background: rgba(255, 255, 255, 0.1);
     color: black;
@@ -12,30 +12,29 @@ input {
     text-align: center;
 }
 
-.search{
+.searchform{
 display: flex;
 justify-content: center;
 flex-direction: row;
-
+/* border: 2px solid black; */
+height: 40px
 }
+
+/* .frame{
+    border: 10px solid black;
+} */
 
 .button{
     margin-left: 5px;
-    padding: .7rem .7rem;
+    
+    padding: .1rem 1rem;
     font-size: 1rem;
-    border-radius: 25px;
+    border-radius: 15px;
     border: 1px solid black;
     background: rgba(255, 255, 255, 0.1);
     color: gray;
 }
-/* .button:hover{
-    background-color: red;
-} */
 
-/* .button:active{
-    background-color: rgb(104, 104, 104);
-    color: black;
-} */
 .button:hover{
     background-color: rgb(120, 120, 120);
     color: white; 

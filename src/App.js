@@ -1,33 +1,18 @@
-import React, { useState } from 'react';
-import BSNavbar from './components/Nav/BSNavbar';
-import BSSchoolFacts from './components/Results/BSSchoolFacts';
-import BSMajorList from './components/Results/BSMajorList'
-import ResultsList from './components/Results/ResultsList';
-import Search from './components/Search/Search';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React from 'react';
+import Home from './routes/Home';
+import About from './routes/About';
+import Calculator from './routes/Calculator';
+
+const router = createBrowserRouter([
+
+  { path: '/DTIUniversity/', element: <Home/> },
+  { path: '/DTIUniversity/about', element: <About/> },
+  { path: '/DTIUniversity/calculator', element: <Calculator/>}
+]);
+
 
 function App() {
- 
-  const [results_, setResults_] = useState('')
-  const [data_, setData_] = useState({})
-  const setData_Handler = (data_) => {
-    setData_(data_)
-  }
-  const setResults_Handler = (results_) => {
-    setResults_(results_)
-  }
-
-  return (
-    <div className="App">
-      <BSNavbar />
-      <Search
-        onSetData_={setData_Handler}
-        onSetResults_={setResults_Handler}
-      />
-      <ResultsList data={data_} />
-      <p>{results_}</p>
-      <BSSchoolFacts data={data_} />
-      <BSMajorList data={data_} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 export default App;

@@ -2,6 +2,7 @@ import './search.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 function Search(props) {
 
     const MY_KEY = process.env.REACT_APP_API_KEY
@@ -25,7 +26,7 @@ function Search(props) {
                 }
             })
         } catch (error) {
-            console.error(error);
+            console.error(error); 
         }
     }
 
@@ -34,14 +35,16 @@ function Search(props) {
     }
 
     return (
-        <form className="search" onSubmit={searchSchool}>
-            <input
-                placeholder={enterSchool}
-                type="text"
-                onChange={setSchoolChangeHandler}
-            />
-            <button type='submit' className="button"> Search </button>
-        </form>
+        <>
+            <form className="searchform" onSubmit={searchSchool}>
+                <input
+                    placeholder={enterSchool}
+                    type="text"
+                    onChange={setSchoolChangeHandler} 
+                />
+                <button type='submit' className="button"> Search </button>
+            </form>
+        </>
     );
 }
 export default Search;

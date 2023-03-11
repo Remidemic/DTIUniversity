@@ -15,7 +15,6 @@ function BSMajorList({data}) {
                     <br/>
                     <br/>
 
-                        
                     {data.results[0].latest.programs.cip_4_digit.map((major, index) => {
                         const key = index;
                         const hasEarnings = () => {
