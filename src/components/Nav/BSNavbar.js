@@ -13,9 +13,9 @@ function OffcanvasExample() {
         <>
             {[false].map((expand) => (
                 <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-                    
+
                     <Container fluid>
-                        <Navbar.Brand href="#">DTIU</Navbar.Brand>
+                        <Navbar.Brand href="/DTIUniversity/">DTIU</Navbar.Brand>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                         <Navbar.Offcanvas
                             id={`offcanvasNavbar-expand-${expand}`}
@@ -33,9 +33,12 @@ function OffcanvasExample() {
                                     <Link to='/DTIUniversity/'>Home</Link>
                                     <Link to='/DTIUniversity/about'> About </Link>
                                     <Link to='/DTIUniversity/COLD'> C.O.L.D. </Link>
+                                    {/* <Link to='/DTIUniversity/LoanPaymentCalculator'> calculator </Link> */}
+                                    <Link to='/DTIUniversity/calculator'> calculator </Link>
+
                                     {/* <Nav.Link href="#action2">Link</Nav.Link> */}
-                                   
-                                   {/* NAV DROPDOWN */}
+
+                                    {/* NAV DROPDOWN */}
                                     {/* <NavDropdown
                                         title="Dropdown"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}

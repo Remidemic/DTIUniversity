@@ -6,8 +6,8 @@ import Search from '../components/Search/Search';
 
 function Home() {
 
-    const [results_, setResults_] = useState('');
     const [data_, setData_] = useState({});
+    const [results_, setResults_] = useState('');
     const setData_Handler = (data_) => { setData_(data_) };
     const setResults_Handler = (results_) => { setResults_(results_) };
 

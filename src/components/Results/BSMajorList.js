@@ -1,19 +1,33 @@
 import Accordion from 'react-bootstrap/Accordion';
 import ListLegend from './ListLegend';
+import { Link } from 'react-router-dom';
 
-function BSMajorList({data}) {
+// const schoolNumbers = [];
+
+
+function BSMajorList({ data }) {
+
+    // const averageDebt = data.results[0].latest.aid.median_debt.completers.overall;
+
+    const selectedData = () => {
+        // // schoolNumbers.push( )
+        // console.log(event.target)
+        return
+    }
+
+
     return (
 
         <>
             {data.results ?
                 <div>
                     <br />
-                        <h4 className='fw-bolder'> - {data.results[0].latest.programs.cip_4_digit.length}
-                        <span className='fw-light'></span> programs listed at {data.results[0].school.name}                     <br/>
-                        </h4>  <p className='fw-bolder'>- Click program for details </p>
+                    <h4 className='fw-bolder'> - {data.results[0].latest.programs.cip_4_digit.length}
+                        <span className='fw-light'></span> programs listed at {data.results[0].school.name}                     <br />
+                    </h4>  <p className='fw-bolder'>- Click program for details </p>
                     - <ListLegend />
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
 
                     {data.results[0].latest.programs.cip_4_digit.map((major, index) => {
                         const key = index;
@@ -23,8 +37,8 @@ function BSMajorList({data}) {
                                 (major.earnings.highest["3_yr"].overall_median_earnings !== null)
                             ) { return <>$</> }
                         }
-                        const certif = () =>{
-                            if (major.credential.title === "Associate's Degree" ) {
+                        const certif = () => {
+                            if (major.credential.title === "Associate's Degree") {
                                 return <>A</>
                             } else if (major.credential.title === "Bachelor’s Degree") {
                                 return <>B</>
@@ -32,18 +46,18 @@ function BSMajorList({data}) {
                                 return <>M</>
                             } else if (major.credential.title === "Doctoral Degree") {
                                 return <>D</>
-                            } 
+                            }
                             else {
                                 return null
                             }
                         }
                         // console.log(key.toString())
                         return (
-                            <div 
+                            <div
                                 key={key}
-                                >
+                            >
                                 <Accordion>
-                                    <Accordion.Item eventKey= {`${Math.random()}`}>
+                                    <Accordion.Item eventKey={`${Math.random()}`}>
                                         <Accordion.Header> {key}. {major.title} {hasEarnings()} {certif()}  </Accordion.Header>
                                         <Accordion.Body>
                                             <div>
@@ -52,6 +66,9 @@ function BSMajorList({data}) {
                                                 <p>1st yr: ${major.earnings.highest["1_yr"].overall_median_earnings}</p>
                                                 <p>2nd yr: ${major.earnings.highest["2_yr"].overall_median_earnings}</p>
                                                 <p>3rd yr: ${major.earnings.highest["3_yr"].overall_median_earnings}</p>
+                                                <Link to='/DTIUniversity/Calculator'>
+                                                    <button onClick={selectedData()}>Select Major # {key.toString()}</button>
+                                                </Link>
                                             </div>
                                         </Accordion.Body>
                                     </Accordion.Item>

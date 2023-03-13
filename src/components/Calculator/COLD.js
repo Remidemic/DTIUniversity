@@ -1,5 +1,5 @@
 // cost of living data
-import React from 'react'
+// import React, {useState} from 'react'
 
 const DATA = [
     { id: 1, city: "Austin, TX", rent: 1106 },
@@ -19,13 +19,25 @@ const DATA = [
     { id: 15, city: "Washington, DC", rent: 1362 }
 ]
 
-function COLD() {
+
+// const interestRate = 0.0373;
+
+ 
+
+function COLD(){
+
+    function logRent(event) {
+        event.preventDefault();
+        console.log(DATA.rent)
+    }
+
+
     return (
         <>
             <h1> COST OF LIVING DATA</h1>
             <ul>
                 {DATA.map((cost) => (
-                    <li key={cost.id}> City : {cost.city} Rent: ${cost.rent}</li>
+                    <li key={cost.id}> City : {cost.city}  <button onClick={logRent}>Rent: $ {cost.rent} </button></li>
                 ))}
             </ul>
         </>

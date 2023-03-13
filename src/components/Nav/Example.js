@@ -9,10 +9,11 @@ function Example() {
 
     return (
         <>
+            <div>
             <Button variant="secondary" onClick={handleShow}>
                 New? Click Here
             </Button>
-
+            </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Welcome to Debt to Income University!</Modal.Title>
