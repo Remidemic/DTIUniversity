@@ -1,4 +1,4 @@
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 // import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -6,7 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Example from './Example';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import classes from './Example.module.css'
 
 function OffcanvasExample() {
     return (
@@ -30,11 +31,26 @@ function OffcanvasExample() {
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
                                     <Example />
-                                    <Link to='/DTIUniversity/'>Home</Link>
-                                    <Link to='/DTIUniversity/about'> About </Link>
-                                    <Link to='/DTIUniversity/COLD'> C.O.L.D. </Link>
+                                    <br />
+                                    <Button variant="secondary">
+                                    <NavLink to='/DTIUniversity/' className={classes.pages}>Home</NavLink>
+                                    </Button>
+                                    <br/>
+                                    <Button variant="secondary">
+
+
+                                        <Link to='/DTIUniversity/about' className={classes.pages }> About </Link>
+                                    </Button>
+
+                                    <br />
+                                    {/* <Link to='/DTIUniversity/COLD'> C.O.L.D. </Link> */}
                                     {/* <Link to='/DTIUniversity/LoanPaymentCalculator'> calculator </Link> */}
-                                    <Link to='/DTIUniversity/calculator'> calculator </Link>
+                                    
+                                    <Button variant="secondary">
+
+
+                                        <Link to='/DTIUniversity/calculator' className={classes.pages} > calculator </Link>
+                                    </Button>
 
                                     {/* <Nav.Link href="#action2">Link</Nav.Link> */}
 
