@@ -5,6 +5,10 @@ import About from './routes/About';
 import Root from './routes/Root';
 import ErrorPage from './routes/ErrorPage';
 import CalcMain from './components/Calculator/CalcMain';
+// import PDFViewer from './components/junk/PDFViewer';
+// import { Document, Page } from 'react-pdf';
+import Scrap from './components/junk/Scrap';
+
 
 const router = createBrowserRouter([
 
@@ -15,10 +19,8 @@ const router = createBrowserRouter([
     children: [
       { path: '/DTIUniversity/', element: <Home /> },
       { path: '/DTIUniversity/about', element: <About /> },
-      // { path: '/DTIUniversity/calculator', element: <Calculator /> },
-      // { path: '/DTIUniversity/COLD', element: <COLD/> },
-      // { path: '/DTIUniversity/LoanPaymentCalculator', element: <LoanPaymentCalculator /> },
       { path: '/DTIUniversity/Calculator', element: <CalcMain /> },
+      { path: '/DTIUniversity/Resume', element: <Scrap/> },
     ]
   }
 ]);

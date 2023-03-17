@@ -9,9 +9,9 @@ function BSMajorList({ data }) {
 
     // const averageDebt = data.results[0].latest.aid.median_debt.completers.overall;
 
-    const selectedData = () => {
-        // // schoolNumbers.push( )
-        // console.log(event.target)
+    const selectedData = (event) => {
+        // event.preventDefault();
+        console.log(event.target.value)
         return
     }
 
@@ -67,7 +67,9 @@ function BSMajorList({ data }) {
                                                 <p>2nd yr: ${major.earnings.highest["2_yr"].overall_median_earnings}</p>
                                                 <p>3rd yr: ${major.earnings.highest["3_yr"].overall_median_earnings}</p>
                                                 <Link to='/DTIUniversity/Calculator'>
-                                                    <button onClick={selectedData()}>Select Major # {key.toString()}</button>
+                                                    <button value={data.results[0].latest.aid.median_debt.completers.overall} onClick={selectedData}>Select Major # {key.toString()}</button>
+
+
                                                 </Link>
                                             </div>
                                         </Accordion.Body>

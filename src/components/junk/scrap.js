@@ -1,22 +1,41 @@
-import React from 'react'
-
-function scrap() {
-    return (<>
-        x<div>median debt : 12665 </div>
-        x<div>median EARNINGS : 100380 </div>
-        fixed <div>interest rate: 5% </div>
-        y<div>austin rent : 902 </div>
-
-        <div>loan payment : 134 </div>
-        <div> income / 12 = 8300</div>
-        <div> rent + loan payment = 1036</div>
-
-        <div> 7263 / month </div> 
+import React, {useState}from 'react';
+import { Document, Page } from "react-pdf";
 
 
-    </>
+function Scrap() {
 
+    const [numPage, setNumPages] = useState(null);
+    const [pageNumber, setPageNumber] = useState(1);
+
+    function onDocumentLoadSuccess({numPages}){
+        setNumPages(numPage);
+        setPageNumber(1);
+    }
+
+
+    return (
+
+        <div>
+            <header>
+                <Document file="./../../../public/JGuzman_Resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+                    <Page height = '600' pageNumber={pageNumber}/>
+                </Document>
+            </header>
+
+        </div>
     )
 }
 
-export default scrap
+export default Scrap
+
+
+// write a react.js component that performs an equation.
+// The form inputs are: annualIncome, monthlyRent, 
+// monthlyLoanPayment.The function of this equation will 
+// divide annualIncome by 12 to find the monthlyIncome.Then
+//  add the monthlyRent to the monthlyLoanPayment to make a
+//   new variable monthlyExpenses.Then subtract the 
+//   monthlyExpenses from monthlyIncome to find 
+//   disposableMonthlyIncome
+
+// update this component so the inputs and outputs are suitable for currency

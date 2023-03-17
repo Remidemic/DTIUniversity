@@ -1,5 +1,9 @@
 // cost of living data
-// import React, {useState} from 'react'
+import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
+import './calc.css';
+// import { useState } from 'react';
+
 
 const DATA = [
     { id: 1, city: "Austin, TX", rent: 1106 },
@@ -22,24 +26,30 @@ const DATA = [
 
 // const interestRate = 0.0373;
 
- 
 
-function COLD(){
+
+function COLD(props) {
 
     function logRent(event) {
         event.preventDefault();
-        console.log(DATA.rent)
+        props.onSetRent(event.target.value)
     }
-
 
     return (
         <>
-            <h1> COST OF LIVING DATA</h1>
-            <ul>
-                {DATA.map((cost) => (
-                    <li key={cost.id}> City : {cost.city}  <button onClick={logRent}>Rent: $ {cost.rent} </button></li>
-                ))}
-            </ul>
+            <div >
+                <h1> Pick a city to live</h1>
+                <ListGroup as="ul">
+                    {DATA.map((cost) => (
+                        <ListGroup.Item as="li" key={cost.id}>
+                            City :  {cost.city}    <br />
+                            <Button variant="secondary" value={cost.rent} onClick={logRent}>
+                                Rent: $ {cost.rent}
+                            </Button>
+                        </ListGroup.Item>
+                    ))}
+                </ListGroup>
+            </div>
         </>
     )
 }

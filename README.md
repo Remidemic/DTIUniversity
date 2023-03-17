@@ -61,6 +61,9 @@ after they graduate based on :
 -the major they persue (future income potential)
 -the city they live in (average rent in 5 major cities for room mate, studio, & )
 
+federal student loan interest rates 
+https://studentaid.gov/understand-aid/types/loans/interest-rates
+
 
 https://www.extraspace.com/blog/moving/city-guides/best-cities-for-young-professionals/ (has average rent prices)
 

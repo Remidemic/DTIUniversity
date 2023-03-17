@@ -1,0 +1,22 @@
+.calc {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border-top: 0;
+    padding-top: 0;
+    margin: 0;
+
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    max-width: 40%;
+}
+.COLD{
+    margin: 10%;
+}

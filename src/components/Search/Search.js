@@ -7,7 +7,6 @@ function Search(props) {
 
     const MY_KEY = process.env.REACT_APP_API_KEY
     const [school, setSchool] = useState('')
-    const [enterSchool, setEnterSchool] = useState('Enter School')
     const url = `https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${school}&api_key=${MY_KEY}`
 
     const searchSchool = async (event) => {
@@ -38,7 +37,7 @@ function Search(props) {
         <>
             <form className="searchform" onSubmit={searchSchool}>
                 <input
-                    placeholder={enterSchool}
+                    placeholder='Enter School'
                     type="text"
                     onChange={setSchoolChangeHandler} 
                 />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function LoanPaymentCalculator() {
+function LoanPaymentCalculator(props) {
     const [principal, setPrincipal] = useState('');
     const [interestRate, setInterestRate] = useState('5.0');
     const [loanTerm, setLoanTerm] = useState('10');
@@ -16,11 +16,14 @@ function LoanPaymentCalculator() {
         const payment = (principal * (numerator / denominator)).toFixed(2);
 
         setMonthlyPayment(payment);
+        
+        props.onSetLoanPayment_(payment);
+
     }
 
     return ( 
         <>
-        <h1>LoanPaymentCalculator</h1>
+        <h2>LoanPaymentCalculator</h2>
         
         <form onSubmit={calculateMonthlyPayment}>
             <div>

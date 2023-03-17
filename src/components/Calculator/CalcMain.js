@@ -1,17 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import COLD from './COLD';
 import IncomeCalculator from './IncomeCalculator';
 import LoanPaymentCalculator from './LoanPaymentCalculator';
+import './calc.css';
+
+
 
 function CalcMain() {
+
+
+
+    const [rent, setRent] = useState('');
+    const setRentHandler = (rent) => { setRent(rent) };
+
+    const [loanPayment, setLoanPayment] = useState('');
+    const setLoanPaymentHandler = (loanPayment) => { setLoanPayment(loanPayment) }
+
     return (
         <>
+            <h1>Future Income Calculator</h1>
 
-            <h1>CalcMain</h1>
-            <LoanPaymentCalculator />
-            <br/>
-            <IncomeCalculator/>
-            <COLD />
+            <div className='wrap'>
+                <div className='COLD'>
+                <COLD onSetRent={setRentHandler} />
+                </div>
+                <div className='calc'>
+                    <LoanPaymentCalculator onSetLoanPayment_={setLoanPaymentHandler} />
+                    <br />
+                    <IncomeCalculator rent_={rent} loanPayment_={loanPayment} />
+                </div>
+            </div>
         </>
     )
 }
