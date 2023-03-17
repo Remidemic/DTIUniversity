@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/DTIUniversity/', element: <Home /> },
       { path: '/DTIUniversity/about', element: <About /> },
-      { path: '/DTIUniversity/Calculator', element: <CalcMain /> },
+      { path: '/DTIUniversity/calculator', element: <CalcMain /> },
       { path: '/DTIUniversity/Resume', element: <Scrap/> },
     ]
   }
