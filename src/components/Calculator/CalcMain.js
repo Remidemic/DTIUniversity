@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import COLD from './COLD';
 import IncomeCalculator from './IncomeCalculator';
 import LoanPaymentCalculator from './LoanPaymentCalculator';
-import './calc.css';
+// import './calc.css';
 
 
 
@@ -20,16 +20,16 @@ function CalcMain() {
         <>
             <h1>Future Income Calculator</h1>
 
-            <div className='wrap'>
-                <div className='COLD'>
-                <COLD onSetRent={setRentHandler} />
-                </div>
-                <div className='calc'>
+            {/* <div className='wrap'>
+                <div className='COLD'> */}
+                    <COLD onSetRent={setRentHandler} />
+                {/* </div>
+                <div className='calc'> */}
                     <LoanPaymentCalculator onSetLoanPayment_={setLoanPaymentHandler} />
                     <br />
                     <IncomeCalculator rent_={rent} loanPayment_={loanPayment} />
-                </div>
-            </div>
+                {/* </div>
+            </div> */}
         </>
     )
 }

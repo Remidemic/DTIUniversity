@@ -7,7 +7,7 @@ import ErrorPage from './routes/ErrorPage';
 import CalcMain from './components/Calculator/CalcMain';
 // import PDFViewer from './components/junk/PDFViewer';
 // import { Document, Page } from 'react-pdf';
-import Scrap from './components/junk/Scrap';
+// import Scrap from './components/junk/Scrap';
 
 
 const router = createBrowserRouter([
@@ -19,8 +19,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/DTIUniversity/', element: <Home /> },
       { path: '/DTIUniversity/about', element: <About /> },
-      { path: '/DTIUniversity/calculator', element: <CalcMain /> },
-      { path: '/DTIUniversity/Resume', element: <Scrap/> },
+      { path: '/DTIUniversity/calculator', element: <CalcMain /> }
     ]
   }
 ]);
