@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import './calc.css'
 
 function IncomeCalculator(props) {
     const [annualIncome, setAnnualIncome] = useState('');
@@ -63,7 +64,7 @@ function IncomeCalculator(props) {
             <br />
             <br />
             <br />
-            <h3>Disposable Monthly Income: ${disposableMonthlyIncome}</h3>
+            <h3> you could earn <span> ${disposableMonthlyIncome} </span>  each month with a degree from (x) in (y), living in (z) city. Skeptical about what life could be like after graduating?  Reach out to ( school, hyperlink, email template) to find out while youre still deciding.</h3>
             <br />
             <Link to='/DTIUniversity/'>  <Button variant="primary">Start Over</Button> </Link>
 

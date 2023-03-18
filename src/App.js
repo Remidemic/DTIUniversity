@@ -14,9 +14,9 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage/>,
     children: [
-      { path: 'DTIUniversity/', element: <Home /> },
-      { path: 'DTIUniversity/about', element: <About /> },
-      { path: 'DTIUniversity/calculator', element: <CalcMain /> }
+      { path: '/DTIUniversity/', element: <Home /> },
+      { path: '/DTIUniversity/about', element: <About /> },
+      { path: '/DTIUniversity/calculator', element: <CalcMain /> }
     ]
   }
 ]);

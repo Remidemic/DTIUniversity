@@ -38,20 +38,21 @@ function COLD(props) {
     return (
         <>
             <div >
-                <h1> Pick a city to live</h1>
-                <ListGroup as="ul">
+                {/* <h1> Pick a city</h1> */}
+                <ul className='container'>
                     {DATA.map((cost) => (
-                        <ListGroup.Item as="li" key={cost.id}>
-                            City :  {cost.city}    <br />
-                            <Button variant="secondary" value={cost.rent} onClick={logRent}>
-                                Rent: $ {cost.rent}
+                        <div key={cost.id} className="item">
+                            {/* $ {cost.rent}    <br /> */}
+                            <Button className='city' variant="secondary" value={cost.rent} onClick={logRent}>
+                                {cost.city}
                             </Button>
-                        </ListGroup.Item>
+                        </div> 
                     ))}
-                </ListGroup>
+                    <a target="_blank" rel="noreferrer" href='https://www.extraspace.com/blog/moving/city-guides/best-cities-for-young-professionals/'> source</a>
+                </ul>
             </div>
         </>
     )
-}
+} 
 
 export default COLD
