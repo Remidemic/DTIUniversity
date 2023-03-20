@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import COLD from './COLD';
-import IncomeCalculator from './IncomeCalculator';
-import LoanPaymentCalculator from './LoanPaymentCalculator';
+// import IncomeCalculator from './IncomeCalculator';
+// import LoanPaymentCalculator from './LoanPaymentCalculator';
+import NewLoanCalc from './NewLoanCalc';
 import './calc.css';
 
 
@@ -21,9 +22,11 @@ function CalcMain() {
             <h3 className='center'>You graduated! Where will you live? </h3>
                 <COLD onSetRent={setRentHandler} />
 
-                    <LoanPaymentCalculator onSetLoanPayment_={setLoanPaymentHandler} />
+            <NewLoanCalc onSetLoanPayment_={setLoanPaymentHandler} rent_={rent} loanPayment_={loanPayment} />
+
+                    {/* <LoanPaymentCalculator onSetLoanPayment_={setLoanPaymentHandler} />
                     <br />
-                    <IncomeCalculator rent_={rent} loanPayment_={loanPayment} />
+                    <IncomeCalculator rent_={rent} loanPayment_={loanPayment} /> */}
         </>
     )
 }

@@ -8,7 +8,7 @@ import './calc.css';
 const DATA = [
     { id: 1, city: "Austin, TX", rent: 1106 },
     { id: 2, city: "Boston, MA", rent: 1369 },
-    { id: 3, city: "Denver, CO", rent: 1035 },
+    { id: 3, city: "San Francisco, CA ", rent: 1632 },
     { id: 4, city: "Des Moines, IA", rent: 775 },
     { id: 5, city: "Madison, WI", rent: 959 },
     { id: 6, city: "Minneapolis, MN", rent: 898 },
@@ -18,7 +18,7 @@ const DATA = [
     { id: 10, city: "Portland, OR", rent: 1025 },
     { id: 11, city: "Raleigh, NC", rent: 966 },
     { id: 12, city: "Salt Lake City, UT", rent: 844 },
-    { id: 13, city: "San Francisco, CA ", rent: 1632 },
+    { id: 13, city: "Denver, CO", rent: 1035 },
     { id: 14, city: "Seattle, WA", rent: 1266 },
     { id: 15, city: "Washington, DC", rent: 1362 }
 ]
@@ -48,7 +48,6 @@ function COLD(props) {
                             </Button>
                         </div> 
                     ))}
-                    <a target="_blank" rel="noreferrer" href='https://www.extraspace.com/blog/moving/city-guides/best-cities-for-young-professionals/'> source</a>
                 </ul>
             </div>
         </>
