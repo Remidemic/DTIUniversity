@@ -16,6 +16,8 @@ function LoanPaymentCalculator(props) {
     const [interestRate, setInterestRate] = useState('5.0');
     const [loanTerm, setLoanTerm] = useState('10');
     const [monthlyPayment, setMonthlyPayment] = useState('');
+    const [annualIncome, setAnnualIncome] = useState('');
+    const [dime, setDime] = useState(0);
 
     function calculateMonthlyPayment(event) {
         event.preventDefault();
@@ -29,15 +31,10 @@ function LoanPaymentCalculator(props) {
         setMonthlyPayment(payment);
 
         props.onSetLoanPayment_(payment);
-
     }
+    // console.log(monthlyPayment)
 
     // income calc 
-
-    const [annualIncome, setAnnualIncome] = useState('');
-    // const [monthlyRent, setMonthlyRent] = useState('');
-    // const [monthlyLoanPayment, setMonthlyLoanPayment] = useState('');
-    const [disposableMonthlyIncome, setDisposableMonthlyIncome] = useState(0);
 
     const handleIncomeChange = (event) => {
         setAnnualIncome(Number(event.target.value));
@@ -49,19 +46,27 @@ function LoanPaymentCalculator(props) {
         // setMonthlyRent(Number(event.target.value));
     };
 
+    const handleDIMEChange = () => {
+
+    };
+
     const handleLoanPaymentChange = () => {
         // setMonthlyLoanPayment(Number(event.target.value));
     };
 
     const calculateDisposableIncome = () => {
         const monthlyIncome = annualIncome / 12;
-        const monthlyExpenses = Number(props.rent_) + Number(props.loanPayment_);
+        const monthlyExpenses = Number(props.rent_) + Number(monthlyPayment);
         const disposableIncome = monthlyIncome - monthlyExpenses;
-        setDisposableMonthlyIncome(disposableIncome.toFixed(2));
+        setDime(disposableIncome.toFixed(2));
+
+
+
+
     };
 
 
-    return (
+    return (<>
         <Form onSubmit={calculateMonthlyPayment}>
             <hr color='black'></hr>
 
@@ -71,7 +76,7 @@ function LoanPaymentCalculator(props) {
                     <label htmlFor="principal">Loan amount:</label>
                 </Col>
                 <Col>
-                    <input type="number" id="principal" value={principal} onChange={(event) => setPrincipal(event.target.value)} />
+                    <input type="number" placeholder='enter loan amount' id="principal" value={principal} onChange={(event) => setPrincipal(event.target.value)} />
                 </Col>
             </Row>
             <Row>
@@ -94,20 +99,26 @@ function LoanPaymentCalculator(props) {
                 <Col xs={5}>
                     {/* <label htmlFor="monthly-payment">Monthly payment:</label> */}
                     <button className='button_'
-                        onClick={calculateDisposableIncome}>
+                        onClick={calculateMonthlyPayment}>
                         Monthly Payment
                     </button>
                 </Col>
                 <Col>
-                    <input id="monthly-payment" value={monthlyPayment} />
+                    <input id="monthly-payment" value={monthlyPayment} onChange={handleLoanPaymentChange} />
                 </Col>
             </Row>
+            <hr color='black'></hr>
+
+        </Form>
+
+        <Form onSubmit={calculateDisposableIncome}>
+
             <Row>
                 <Col xs={5}>
                     <label>Annual Income:</label>
                 </Col>
                 <Col>
-                    <input type="number" value={annualIncome} onChange={handleIncomeChange} />
+                    <input type="number" placeholder='enter income' value={annualIncome} onChange={handleIncomeChange} />
                 </Col>
             </Row>
             <Row>
@@ -123,12 +134,13 @@ function LoanPaymentCalculator(props) {
 
             <Row>
                 <Col xs={5}>
-                    <Button variant='primary'>DIME*</Button>                </Col>
+                    <Button variant='primary' onClick={calculateDisposableIncome}>DIME*</Button>
+                </Col>
                 <Col>
-                    <input />
+                    <input value={dime} onChange={handleDIMEChange} />
                 </Col>
             </Row>
-<br />
+            <br />
             <Row>
                 <Col xs={5}>
                     <Link to='/DTIUniversity/'>
@@ -144,16 +156,21 @@ function LoanPaymentCalculator(props) {
 
             <Row>
                 <hr color='black'></hr>
+                <h6>DIME = Disposable Income (per) Month Expected</h6>
                 <h5>sources</h5>
                 <h6><a target="_blank" rel="noreferrer" href='https://collegescorecard.ed.gov/'>Loan Amount</a></h6>
                 <h6><a target="_blank" rel="noreferrer" href='https://studentaid.gov/understand-aid/types/loans/interest-rates'>Current Interest rate</a></h6>
                 <h6><a target="_blank" rel="noreferrer" href='https://www.extraspace.com/blog/moving/city-guides/best-cities-for-young-professionals/'> average rent by city</a></h6>
                 <h6><a target="_blank" rel="noreferrer" href='https://www.extraspace.com/blog/moving/city-guides/best-cities-for-young-professionals/'> average income by degree via institution providing the program</a></h6>
 
-                <h6>DIME = disposable income per month expected</h6>
                 <br />
             </Row>
         </Form>
+
+
+
+    </>
+
     );
 }
 

@@ -20,6 +20,7 @@ function CalcMain() {
     return (
         <>
             <h3 className='center'>You graduated! Where will you live? </h3>
+                    <h6>(click a city)</h6>
                 <COLD onSetRent={setRentHandler} />
 
             <NewLoanCalc onSetLoanPayment_={setLoanPaymentHandler} rent_={rent} loanPayment_={loanPayment} />

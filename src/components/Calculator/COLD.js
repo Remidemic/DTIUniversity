@@ -1,5 +1,5 @@
 // cost of living data
-import ListGroup from 'react-bootstrap/ListGroup';
+// import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import './calc.css';
 // import { useState } from 'react';
@@ -22,11 +22,6 @@ const DATA = [
     { id: 14, city: "Seattle, WA", rent: 1266 },
     { id: 15, city: "Washington, DC", rent: 1362 }
 ]
-
-
-// const interestRate = 0.0373;
-
-
 
 function COLD(props) {
 

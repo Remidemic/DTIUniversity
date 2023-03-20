@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 // const schoolNumbers = [];
 
 
-function BSMajorList({ data }) {
+function BSMajorList({ data }, { onSetTuition_ }) {
 
     // const averageDebt = data.results[0].latest.aid.median_debt.completers.overall;
 
     const selectedData = (event) => {
         // event.preventDefault();
-        console.log(event.target.value)
-        return
+        console.log(event.target.value)        
     }
 
 

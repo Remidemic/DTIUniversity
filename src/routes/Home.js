@@ -8,11 +8,12 @@ function Home() {
 
     const [data_, setData_] = useState({});
     const [results_, setResults_] = useState('');
+    // const [tuition_, setTuition_] = useState('');
     const setData_Handler = (data_) => { setData_(data_) };
     const setResults_Handler = (results_) => { setResults_(results_) };
+    // const setTuition_handler = (tuition_) => { setTuition_(tuition_) };
 
-    
- 
+
     return (
         <div className="App">
             <Search
