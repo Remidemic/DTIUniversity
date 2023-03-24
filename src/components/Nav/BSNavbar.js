@@ -37,11 +37,12 @@ function OffcanvasExample() {
                                     </Button>
                                     <br/>
                                     <Button variant="secondary">
-
-
                                         <Link to='/DTIUniversity/about' className={classes.pages }> About </Link>
                                     </Button>
-
+                                    <br />
+                                    <Button variant="secondary">
+                                        <Link to='/DTIUniversity/email' className={classes.pages }> Email </Link>
+                                    </Button>
                                     <br />
                                     {/* <Link to='/DTIUniversity/COLD'> C.O.L.D. </Link> */}
                                     {/* <Link to='/DTIUniversity/LoanPaymentCalculator'> calculator </Link> */}

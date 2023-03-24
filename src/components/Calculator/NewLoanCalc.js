@@ -71,7 +71,7 @@ const LoanPaymentCalculator = (props) => {
                 <Col xs={5}>
                     <Button className='button_' variant="primary"
                         onClick={calculateMonthlyPayment}>
-                        Monthly Payment
+                        Mnthly Pymt
                     </Button>
                 </Col>
                 <Col>
@@ -100,6 +100,8 @@ const LoanPaymentCalculator = (props) => {
                 </Col>
                 <Col><input className='inputfield' value={dime} onChange={handleDIMEChange} /></Col>
             </Row>
+            <br />
+                <h6>DIME = Disposable Income (per) Month Expected</h6>
             <hr color='black'></hr>
             <Row>
                 <Col xs={5}>
@@ -112,7 +114,6 @@ const LoanPaymentCalculator = (props) => {
             </Row>
             <br />
             <Row>
-                <h6>DIME = Disposable Income (per) Month Expected</h6>
                 <h5>sources</h5>
                 <h6><a target="_blank" rel="noreferrer" href='https://collegescorecard.ed.gov/'>Loan Amount</a></h6>
                 <h6><a target="_blank" rel="noreferrer" href='https://studentaid.gov/understand-aid/types/loans/interest-rates'>Current Interest rate</a></h6>

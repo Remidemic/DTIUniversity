@@ -2,10 +2,12 @@ import Accordion from 'react-bootstrap/Accordion';
 import ListLegend from './ListLegend';
 import { Link } from 'react-router-dom';
 
+// import EmailTemplate from './Email_Template/Email'
+
 // const schoolNumbers = [];
 
 
-function BSMajorList({ data }, { onSetTuition_ }) {
+function BSMajorList({ data }) {
 
     // const averageDebt = data.results[0].latest.aid.median_debt.completers.overall;
 
@@ -62,13 +64,16 @@ function BSMajorList({ data }, { onSetTuition_ }) {
                                             <div>
                                                 <p>Certificate: {major.credential.title}</p>
                                                 <p>overall median earnings:</p>
-                                                <p>1st yr: ${major.earnings.highest["1_yr"].overall_median_earnings}</p>
-                                                <p>2nd yr: ${major.earnings.highest["2_yr"].overall_median_earnings}</p>
-                                                <p>3rd yr: ${major.earnings.highest["3_yr"].overall_median_earnings}</p>
+                                                <p>1st yr: {major.earnings.highest["1_yr"].overall_median_earnings !== null ? `$ ${major.earnings.highest["1_yr"].overall_median_earnings}` : "no earning reported by school"}</p>
+                                                <p>2nd yr: {major.earnings.highest["2_yr"].overall_median_earnings !== null ? `$ ${major.earnings.highest["2_yr"].overall_median_earnings}` : "no earning reported by school"}</p>
+                                                <p>3rd yr: {major.earnings.highest["3_yr"].overall_median_earnings !== null ? `$ ${major.earnings.highest["3_yr"].overall_median_earnings}` : "no earning reported by school"}</p>
                                                 <Link to='/DTIUniversity/Calculator'>
                                                     <button value={data.results[0].latest.aid.median_debt.completers.overall} onClick={selectedData}>Select Major # {key.toString()}</button>
+                                                </Link>
+                                                <Link to='/DTIUniversity/email'>
 
 
+                                                <button> SEND EMAIL</button>
                                                 </Link>
                                             </div>
                                         </Accordion.Body>
