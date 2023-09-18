@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DTIUniversity/static/css/main.d71fd1fb.css",
-    "main.js": "/DTIUniversity/static/js/main.e1fd4784.js",
+    "main.js": "/DTIUniversity/static/js/main.3a2554b7.js",
     "index.html": "/DTIUniversity/index.html",
     "main.d71fd1fb.css.map": "/DTIUniversity/static/css/main.d71fd1fb.css.map",
-    "main.e1fd4784.js.map": "/DTIUniversity/static/js/main.e1fd4784.js.map"
+    "main.3a2554b7.js.map": "/DTIUniversity/static/js/main.3a2554b7.js.map"
   },
   "entrypoints": [
     "static/css/main.d71fd1fb.css",
-    "static/js/main.e1fd4784.js"
+    "static/js/main.3a2554b7.js"
   ]
 }
