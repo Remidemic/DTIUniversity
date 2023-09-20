@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./email.css";
 
 const EMAILS = {
     "Abilene Christian University": "info@admissions.acu.edu",
@@ -1715,15 +1716,15 @@ const EmailForm = () => {
             </div>
             <div >
                 <div> 
-                    <label>To:</label> {selectedEmail.email}
+                    <label>To: </label> {selectedEmail.email}
                 </div>
                 <div>
                 <label htmlFor="emailBody">Body:</label>
-                    <textarea id="emailBody" value={emailBody} onChange={handleBodyChange} />
+                    <textarea className="emailtext" id="emailBody" value={emailBody} onChange={handleBodyChange} />
                 </div>
             </div>
             <button onClick={sendEmail}>Send</button>
-        </div>
+        </div> 
     );
 };
 
