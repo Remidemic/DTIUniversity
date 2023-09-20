@@ -16,6 +16,8 @@ function Home() {
 
     return (
         <div className="App">
+
+            <p className='titlescript'> Welcome to Debt To Income University. in just a few clicks, youll be able to see what your financial life can look like after college. if this is your first visit, click the dropdown tab on the top right to learn your way around. </p>
             <Search
                 onSetData_={setData_Handler}
                 onSetResults_={setResults_Handler}
