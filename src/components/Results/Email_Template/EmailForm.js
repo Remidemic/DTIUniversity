@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./email.css";
 
 const EMAILS = {
+    "select school for email" : null,
     "Abilene Christian University": "info@admissions.acu.edu",
     "Academy Of Art University": "admissions@academyart.edu",
     "Acadia University": "admissions@acadiau.ca",
